@@ -6,6 +6,19 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 
 ---
 
+## [Unreleased]
+
+### Added
+
+- Configured ESLint (Flat Config)
+- Added @typescript-eslint parser and rules
+- Added React Hooks and React Refresh plugins
+- Configured Prettier
+- Integrated ESLint with Prettier
+- Added lint and format scripts
+- Updated .gitignore
+- Committed pnpm-lock.yaml
+
 ## [0.1.1] - 2026-02-26
 
 ### Added
