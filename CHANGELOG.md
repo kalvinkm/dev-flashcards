@@ -8,6 +8,8 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-02-26
+
 ### Added
 
 - Configured ESLint (Flat Config)
