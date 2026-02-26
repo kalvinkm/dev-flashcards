@@ -9,6 +9,7 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 ## [0.1.1] - 2026-02-26
 
 ### Added
+
 - Introduced CHANGELOG for structured version tracking
 - Established release promotion workflow (`develop` → `main`)
 - Applied Semantic Versioning strategy
@@ -18,6 +19,7 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 ## [0.1.0] - 2026-02-26
 
 ### Added
+
 - Initial project structure
 - README with purpose, roadmap, and architectural direction
 - Branching strategy (main/develop workflow)
