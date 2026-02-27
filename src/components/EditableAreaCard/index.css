@@ -1,0 +1,20 @@
+.editable-area-card {
+  width: 160px;
+  height: 200px;
+  border: 1px solid white;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.editable-area-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}

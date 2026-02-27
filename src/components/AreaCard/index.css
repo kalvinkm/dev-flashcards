@@ -1,0 +1,39 @@
+.area-card {
+  position: relative;
+  width: 160px;
+  height: 200px;
+  border: 1px solid white;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.area-card:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.area-card-title {
+  font-weight: 600;
+  text-align: center;
+}
+
+.area-card-delete {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.area-card:hover .area-card-delete {
+  opacity: 1;
+}

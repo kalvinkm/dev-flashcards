@@ -4,3 +4,14 @@
   flex-wrap: wrap;
   margin-top: 16px;
 }
+
+.areas-section-creating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 200px;
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 12px;
+}
