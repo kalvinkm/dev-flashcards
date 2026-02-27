@@ -1,0 +1,17 @@
+.addition-card {
+  width: 160px;
+  height: 200px;
+  border: 1px dashed #888;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.addition-card-plus-sign {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
