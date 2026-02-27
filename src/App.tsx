@@ -1,5 +1,5 @@
 import './App.css'
-import { AddAreaCard } from './components/AddAreaCard'
+import { AreasSection } from './components/AreasSection'
 
 function App() {
   return (
@@ -11,10 +11,8 @@ function App() {
       }}
     >
       <h1>Dev Flash Cards</h1>
-      <div>
-        <h3>Area de Tópicos</h3>
-        <AddAreaCard onClick={() => console.log('CLICOU')} />
-      </div>
+
+      <AreasSection />
     </div>
   )
 }
