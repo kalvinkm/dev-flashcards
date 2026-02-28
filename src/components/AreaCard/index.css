@@ -2,13 +2,16 @@
   position: relative;
   width: 160px;
   height: 200px;
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all 0.2s ease;
+  user-select: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .area-card:hover {
@@ -34,6 +37,12 @@
   transition: opacity 0.2s ease;
 }
 
-.area-card:hover .area-card-delete {
+.area-card:hover .area-card-delete,
+.area-card:focus-within .area-card-delete {
   opacity: 1;
+}
+
+.area-card-delete:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
