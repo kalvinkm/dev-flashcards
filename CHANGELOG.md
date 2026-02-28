@@ -13,7 +13,10 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 - Dynamic area management (create, edit, delete)
 - Inline editing for area titles
 - Hover-based deletion for areas
-- Refactored area state to use structured Area type
+
+### Changed
+
+- Refactored area state to use structured `Area` type
 
 ### Internal
 
