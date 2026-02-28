@@ -16,11 +16,12 @@ export function AreasSection() {
   const [newTitle, setNewTitle] = useState('')
 
   function handleCreate() {
-    if (!newTitle.trim()) return
+    const trimmedTitle = newTitle.trim()
+    if (!trimmedTitle) return
 
     const newArea: Area = {
       id: crypto.randomUUID(),
-      title: newTitle,
+      title: trimmedTitle,
     }
 
     setAreas((prev) => [...prev, newArea])
@@ -29,11 +30,12 @@ export function AreasSection() {
   }
 
   function handleUpdate(id: string, newTitle: string) {
-    if (!newTitle.trim()) return
+    const trimmedTitle = newTitle.trim()
+    if (!trimmedTitle) return
 
     setAreas((prev) =>
       prev.map((area) =>
-        area.id === id ? { ...area, title: newTitle.trim() } : area,
+        area.id === id ? { ...area, title: trimmedTitle } : area,
       ),
     )
 
@@ -76,7 +78,14 @@ export function AreasSection() {
               value={newTitle}
               onChange={(e) => setNewTitle(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === 'Enter') handleCreate()
+                if (e.key === 'Enter') {
+                  handleCreate()
+                }
+
+                if (e.key === 'Escape') {
+                  setIsCreating(false)
+                  setNewTitle('')
+                }
               }}
               placeholder="Nome do tópico"
               autoFocus
