@@ -1,0 +1,31 @@
+.addition-card {
+  all: unset;
+  width: 160px;
+  height: 200px;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.addition-card:hover {
+  border-color: #fff;
+  transform: translateY(-4px);
+}
+
+.addition-card:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.addition-card-plus-sign {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}

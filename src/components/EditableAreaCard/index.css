@@ -1,0 +1,33 @@
+.editable-area-card {
+  width: 160px;
+  height: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  user-select: none;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.editable-area-card:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.editable-area-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.editable-area-input:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.4);
+  outline-offset: 2px;
+}
