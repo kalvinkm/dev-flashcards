@@ -13,10 +13,8 @@ export function EditableAreaCard({
   onCancel,
 }: EditableAreaCardProps) {
   const [value, setValue] = useState(initialValue)
-  const [isCanceled, setIsCanceled] = useState(false)
 
   function handleSave() {
-    if (isCanceled) return
     const trimmed = value.trim()
     if (!trimmed) return
     onSave(trimmed)
@@ -30,11 +28,7 @@ export function EditableAreaCard({
         onChange={(e) => setValue(e.target.value)}
         onKeyDown={(e) => {
           if (e.key === 'Enter') handleSave()
-
-          if (e.key === 'Escape') {
-            setIsCanceled(true)
-            onCancel()
-          }
+          if (e.key === 'Escape') onCancel()
         }}
         onBlur={handleSave}
         autoFocus
