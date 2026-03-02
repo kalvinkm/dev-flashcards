@@ -8,6 +8,8 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-03-02
+
 ### Added
 
 - Dynamic area management (create, edit, delete)
