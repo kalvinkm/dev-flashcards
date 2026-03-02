@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'GameOfThrones';
+  src: url('../assets/fonts/game-of-thrones.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   /* === BACKGROUNDS === */
   --color-bg-primary: #331c0e; /* fundo principal */
@@ -14,4 +21,7 @@
 
   /* === BORDERS === */
   --color-border-subtle: rgba(255, 241, 144, 0.3);
+
+  /* === FONTS === */
+  --font-display: 'GameOfThrones', serif;
 }

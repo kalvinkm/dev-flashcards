@@ -4,3 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
+
+.app-title {
+  font-family: var(--font-display);
+  color: var(--color-accent-gold);
+  letter-spacing: 4px;
+  text-shadow: 0 0 8px rgba(255, 241, 144, 0.3);
+}

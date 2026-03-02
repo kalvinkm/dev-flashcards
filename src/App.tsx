@@ -10,7 +10,7 @@ function App() {
         padding: '20px',
       }}
     >
-      <h1>Dev Flash Cards</h1>
+      <h1 className="app-title">Dev Flash Cards</h1>
 
       <AreasSection />
     </div>
