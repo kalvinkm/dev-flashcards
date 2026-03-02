@@ -8,6 +8,21 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 
 ## [Unreleased]
 
+### Added
+
+- Dynamic area management (create, edit, delete)
+- Inline editing for area titles
+- Hover-based deletion for areas
+
+### Changed
+
+- Refactored area state to use structured `Area` type
+
+### Internal
+
+- Disabled base `no-unused-vars` rule to avoid conflict with TypeScript ESLint
+- Improved component separation (EditableAreaCard extraction)
+
 ## [0.1.2] - 2026-02-26
 
 ### Added

@@ -30,9 +30,22 @@ export default [
       prettier,
     },
     rules: {
+      ...tsPlugin.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': 'warn',
       'prettier/prettier': 'error',
+
+      // DESABILITA a regra base
+      'no-unused-vars': 'off',
+
+      // Usa apenas a versão correta para TS
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
     },
   },
 ]
