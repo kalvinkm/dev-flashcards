@@ -30,6 +30,7 @@ export default [
       prettier,
     },
     rules: {
+      ...tsPlugin.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': 'warn',
       'prettier/prettier': 'error',
