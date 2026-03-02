@@ -1,0 +1,17 @@
+:root {
+  /* === BACKGROUNDS === */
+  --color-bg-primary: #331c0e; /* fundo principal */
+  --color-bg-surface: #67331e; /* cards */
+  --color-bg-elevated: #c38d5f; /* hover / destaque suave */
+
+  /* === ACCENTS === */
+  --color-accent-primary: #b9540c; /* ações principais */
+  --color-accent-gold: #fff190; /* destaque nobre */
+
+  /* === TEXT === */
+  --color-text-primary: #fcfef0; /* texto principal */
+  --color-text-muted: rgba(252, 254, 240, 0.7);
+
+  /* === BORDERS === */
+  --color-border-subtle: rgba(255, 241, 144, 0.3);
+}
