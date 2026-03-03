@@ -51,8 +51,8 @@ export function AreasSection() {
   }
 
   return (
-    <section>
-      <h3>Área de Tópicos</h3>
+    <section className="areas-section-content">
+      <h3 className="areas-section-title">Área de Tópicos</h3>
 
       <div className="areas-section-container">
         {areas.map((area) =>

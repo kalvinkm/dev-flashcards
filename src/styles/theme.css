@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'GameOfThrones';
+  src: url('../assets/fonts/game-of-thrones.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CormorantGaramond';
+  src: url('../assets/fonts/cormorant/CormorantGaramond-Light.ttf')
+    format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CormorantGaramond';
+  src: url('../assets/fonts/cormorant/CormorantGaramond-Regular.ttf')
+    format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CormorantGaramond';
+  src: url('../assets/fonts/cormorant/CormorantGaramond-SemiBold.ttf')
+    format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  /* === BACKGROUNDS === */
+  --color-bg-primary: #331c0e;
+  --color-bg-surface: #67331e;
+  --color-bg-elevated: #c38d5f;
+
+  /* === ACCENTS === */
+  --color-accent-primary: #b9540c;
+  --color-accent-gold: #fff190;
+
+  /* === TEXT === */
+  --color-text-primary: #fcfef0;
+  --color-text-muted: rgba(252, 254, 240, 0.7);
+  --color-text-soft: rgba(252, 254, 240, 0.85);
+
+  /* === BORDERS === */
+  --color-border-subtle: rgba(255, 241, 144, 0.3);
+
+  /* === FONT FAMILIES === */
+  --font-display: 'GameOfThrones', serif;
+  --font-body: 'CormorantGaramond', serif;
+  --font-section: 'CormorantGaramond', serif;
+
+  /* === FONT WEIGHTS === */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+
+  /* === SPACING === */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* === RADIUS === */
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  /* === TRANSITIONS === */
+  --transition-fast: 0.2s ease;
+
+  /* === SHADOWS === */
+  --shadow-card: 0 6px 16px rgba(0, 0, 0, 0.25);
+  --shadow-card-hover: 0 10px 22px rgba(0, 0, 0, 0.35);
+}
