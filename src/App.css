@@ -13,7 +13,7 @@
   font-family: var(--font-display);
   color: var(--color-accent-gold);
   letter-spacing: 6px;
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   margin-bottom: var(--spacing-sm);
   text-align: center;
   text-shadow: 0 0 6px rgba(255, 241, 144, 0.2);
