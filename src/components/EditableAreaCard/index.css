@@ -1,33 +1,61 @@
 .editable-area-card {
-  width: 160px;
-  height: 200px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
+  width: 170px;
+  aspect-ratio: 170 / 210;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px;
-  user-select: none;
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease;
-}
 
-.editable-area-card:hover {
-  transform: translateY(-4px);
-  background-color: rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-md);
+
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+
+  background-color: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+
+  box-shadow:
+    0 0 0 1px var(--color-accent-gold),
+    var(--shadow-card);
+
+  user-select: none;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .editable-area-input {
   width: 100%;
+
   background: transparent;
   border: none;
-  color: white;
+
+  color: var(--color-text-primary);
+
   text-align: center;
+
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-regular);
   font-size: 1rem;
+
+  caret-color: var(--color-accent-gold);
 }
 
 .editable-area-input:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.4);
+  outline: 2px solid var(--color-accent-gold);
   outline-offset: 2px;
+}
+
+.editable-area-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+@media (hover: hover) {
+  .editable-area-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 0 0 1px var(--color-accent-gold),
+      var(--shadow-card-hover);
+  }
 }
