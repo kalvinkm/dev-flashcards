@@ -8,6 +8,18 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-03-03
+
+### Fixed
+
+- Corrigido problema onde o botão de exclusão não era exibido em dispositivos mobile.
+- Ajustado comportamento de edição do card para funcionar corretamente em dispositivos touch (substituído `onDoubleClick` por `onClick`).
+- Garantido suporte adequado a navegação por teclado (Enter e Space ativam edição).
+
+### Added
+
+- Adicionado favicon personalizado ao projeto.
+
 ## [0.3.0] - 2026-03-03
 
 ### Added
