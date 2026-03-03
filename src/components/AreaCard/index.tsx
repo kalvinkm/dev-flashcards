@@ -8,7 +8,18 @@ type AreaCardProps = {
 
 export function AreaCard({ title, onDoubleClick, onDelete }: AreaCardProps) {
   return (
-    <div className="area-card" onDoubleClick={onDoubleClick}>
+    <div
+      className="area-card"
+      onClick={onDoubleClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onDoubleClick?.()
+        }
+      }}
+    >
       {onDelete && (
         <button
           type="button"
