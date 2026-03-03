@@ -1,23 +1,17 @@
 .addition-card {
   all: unset;
-
   width: 170px;
   aspect-ratio: 170 / 210;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   border: 1px dashed var(--color-border-subtle);
   border-radius: var(--radius-md);
-
   background-color: transparent;
   color: var(--color-text-muted);
-
   cursor: pointer;
   user-select: none;
-
   transition:
     transform var(--transition-fast),
     border-color var(--transition-fast),
@@ -33,9 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   margin-top: var(--spacing-sm);
-
   transition: transform var(--transition-fast);
 }
 

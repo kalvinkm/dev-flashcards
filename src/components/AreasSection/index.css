@@ -28,18 +28,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 170px;
   aspect-ratio: 170 / 210;
-
   padding: var(--spacing-md);
-
   border: 1px dashed var(--color-border-subtle);
   border-radius: var(--radius-md);
-
   background-color: var(--color-bg-surface);
   color: var(--color-text-primary);
-
   transition:
     transform var(--transition-fast),
     background-color var(--transition-fast),

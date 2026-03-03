@@ -8,6 +8,25 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 
 ## [Unreleased]
 
+### Added
+
+- Introduced visual identity inspired by Game of Thrones
+- Added custom font integration (GameOfThrones + CormorantGaramond)
+- Created centralized `theme.css` with design tokens (colors, spacing, radius, shadows, transitions)
+
+### Changed
+
+- Refactored global styles to use design tokens
+- Standardized card geometry using `aspect-ratio`
+- Improved hover behavior with `(hover: hover)` media query
+- Enhanced mobile-first responsiveness using `clamp()`
+- Improved accessibility (focus-visible states and reduced-motion support)
+
+### Internal
+
+- Introduced spacing token system (`spacing-sm`, `md`, `lg`, `xl`)
+- Consolidated shadow and transition values into theme tokens
+
 ## [0.2.0] - 2026-03-02
 
 ### Added
