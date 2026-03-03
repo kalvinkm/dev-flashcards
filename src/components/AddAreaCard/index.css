@@ -1,31 +1,51 @@
 .addition-card {
   all: unset;
-  width: 160px;
-  height: 200px;
-  border: 1px dashed rgba(255, 255, 255, 0.4);
-  border-radius: 12px;
+  width: 170px;
+  aspect-ratio: 170 / 210;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px dashed var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--color-text-muted);
   cursor: pointer;
+  user-select: none;
   transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.addition-card:hover {
-  border-color: #fff;
-  transform: translateY(-4px);
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
 .addition-card:focus-visible {
-  outline: 2px solid #fff;
+  outline: 2px solid var(--color-accent-gold);
   outline-offset: 4px;
 }
 
 .addition-card-plus-sign {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-sm);
+  transition: transform var(--transition-fast);
+}
+
+.addition-card-plus-sign svg {
+  width: 26px;
+  height: 26px;
+  stroke: currentColor;
+}
+
+@media (hover: hover) {
+  .addition-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent-gold);
+    background-color: var(--color-bg-surface);
+    color: var(--color-text-primary);
+  }
+
+  .addition-card:hover .addition-card-plus-sign {
+    transform: scale(1.08);
+  }
 }
