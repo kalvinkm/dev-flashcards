@@ -8,6 +8,8 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-03-03
+
 ### Fixed
 
 - Corrigido problema onde o botão de exclusão não era exibido em dispositivos mobile.
