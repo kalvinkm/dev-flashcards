@@ -8,6 +8,8 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-03-03
+
 ### Added
 
 - Introduced visual identity inspired by Game of Thrones
