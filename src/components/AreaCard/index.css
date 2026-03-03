@@ -77,3 +77,10 @@
     transform: scale(1.1);
   }
 }
+
+@media (hover: none), (pointer: coarse) {
+  .area-card-delete {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
