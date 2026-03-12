@@ -2,11 +2,19 @@ import './index.css'
 
 type AreaCardProps = {
   title: string
+  heraldic?: string
+  topic?: string
   onDoubleClick?: () => void
   onDelete?: () => void
 }
 
-export function AreaCard({ title, onDoubleClick, onDelete }: AreaCardProps) {
+export function AreaCard({
+  title,
+  heraldic,
+  topic,
+  onDoubleClick,
+  onDelete,
+}: AreaCardProps) {
   return (
     <div
       className="area-card"
@@ -34,7 +42,19 @@ export function AreaCard({ title, onDoubleClick, onDelete }: AreaCardProps) {
         </button>
       )}
 
-      <span className="area-card-title">{title}</span>
+      <div className="area-card-content">
+        <span className="area-card-title">{title}</span>
+
+        {heraldic && (
+          <img
+            src={heraldic}
+            alt={`Heráldica de ${title}`}
+            className="area-card-heraldic"
+          />
+        )}
+
+        {topic && <span className="area-card-topic">{topic}</span>}
+      </div>
     </div>
   )
 }

@@ -1,0 +1,97 @@
+{
+  "areas": [
+    {
+      "id": "qualidade-software",
+      "title": "Qualidade de Software",
+      "heraldic": "qualidade-de-software",
+      "cards": [
+        {
+          "id": "verificacao",
+          "title": "Verificação",
+          "back": {
+            "keyQuestion": "Estamos construindo o software da maneira correta?",
+            "characteristics": [
+              "Processo estático (não precisa executar o sistema)",
+              "Foco na conformidade com requisitos e planejamento",
+              "Relacionada às regras de negócio",
+              "Analisa documentação, modelos e código sem execução"
+            ],
+            "examples": [
+              "Code review",
+              "Revisão de UML",
+              "Análise estática de código",
+              "Revisão de requisitos"
+            ]
+          }
+        },
+        {
+          "id": "validacao",
+          "title": "Validação",
+          "back": {
+            "keyQuestion": "Estamos construindo o software correto?",
+            "characteristics": [
+              "Processo dinâmico (software em execução)",
+              "Foco no produto final",
+              "Verifica se atende às necessidades reais do usuário",
+              "Envolve usuário e stakeholders"
+            ],
+            "examples": [
+              "Teste de sistema",
+              "Teste de aceitação",
+              "Testes funcionais",
+              "Homologação com o cliente"
+            ]
+          }
+        },
+        {
+          "id": "teste-funcional",
+          "title": "Teste Funcional",
+          "back": {
+            "keyQuestion": "O sistema faz o que deveria fazer?",
+            "characteristics": [
+              "Foco nas funcionalidades do sistema",
+              "Valida regras de negócio",
+              "Baseado em requisitos funcionais",
+              "Verifica entradas e saídas",
+              "Confere comportamento esperado do sistema",
+              "Valida fluxos do sistema",
+              "Testa cálculos e regras",
+              "Verifica permissões de acesso",
+              "Baseado em casos de uso",
+              "Baseado em histórias de usuário"
+            ],
+            "examples": [
+              "Login funciona corretamente?",
+              "O cálculo do imposto está correto?",
+              "O sistema salva os dados no banco?",
+              "O usuário com perfil X consegue acessar a tela Y?"
+            ]
+          }
+        },
+        {
+          "id": "teste-nao-funcional",
+          "title": "Teste Não Funcional",
+          "back": {
+            "keyQuestion": "Como o sistema se comporta?",
+            "characteristics": [
+              "Foco na qualidade geral do sistema",
+              "Avalia desempenho e comportamento do sistema",
+              "Baseado em requisitos não funcionais",
+              "Valida performance do sistema",
+              "Verifica segurança da aplicação",
+              "Avalia usabilidade da interface",
+              "Testa escalabilidade da aplicação",
+              "Avalia confiabilidade do sistema"
+            ],
+            "examples": [
+              "O sistema suporta 1.000 usuários simultâneos?",
+              "A resposta da API leva menos de 2 segundos?",
+              "O sistema protege contra SQL Injection?",
+              "A interface é intuitiva?"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
