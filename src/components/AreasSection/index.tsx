@@ -8,6 +8,11 @@ import './index.css'
 type AreaCardData = {
   id: string
   title: string
+  back: {
+    keyQuestion: string
+    characteristics: string[]
+    examples: string[]
+  }
 }
 
 type Area = {
@@ -96,6 +101,7 @@ export function AreasSection() {
               title={area.title}
               heraldic={area.heraldic ?? undefined}
               topic={card.title}
+              back={card.back}
               onDoubleClick={() => setEditingId(area.id)}
               onDelete={() => handleDelete(area.id)}
             />
