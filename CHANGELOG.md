@@ -8,6 +8,8 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-03-13
+
 ### Added
 
 - Introduced JSON-based data structure for flashcard content organization.
