@@ -8,6 +8,18 @@ The format is inspired by Keep a Changelog and this project adheres to Semantic 
 
 ## [Unreleased]
 
+### Added
+
+- Introduced JSON-based data structure for flashcard content organization.
+- Implemented flip card interaction to reveal card back with key question, characteristics and examples.
+
+### Changed
+
+- Increased card aspect-ratio to provide more vertical space for content.
+- Adjusted internal card layout and spacing to support long titles.
+- Prevented title overflow and collision with heraldic images.
+- Improved visual stability and alignment of cards in the card grid.
+
 ## [0.3.1] - 2026-03-03
 
 ### Fixed
