@@ -751,6 +751,2848 @@
           }
         }
       ]
+    },
+    {
+      "id": "principios-solid",
+      "title": "Princípios SOLID",
+      "heraldic": "principios-solid",
+      "cards": [
+        {
+          "id": "solid-srp",
+          "title": "SOLID — Single Responsibility Principle (SRP)",
+          "back": {
+            "keyQuestion": "Qual é a ideia central do Single Responsibility Principle?",
+            "characteristics": [
+              "Uma classe deve ter apenas uma responsabilidade",
+              "Uma classe deve ter apenas um motivo para mudar",
+              "Cada módulo deve tratar apenas um tipo de tarefa",
+              "Facilita manutenção e entendimento do código",
+              "Reduz acoplamento entre partes do sistema"
+            ],
+            "examples": [
+              "Separar lógica de negócio e persistência em classes diferentes",
+              "Criar uma classe apenas para envio de e-mails"
+            ]
+          }
+        },
+        {
+          "id": "solid-ocp",
+          "title": "SOLID — Open/Closed Principle (OCP)",
+          "back": {
+            "keyQuestion": "Qual é a ideia central do Open/Closed Principle?",
+            "characteristics": [
+              "Entidades de software devem estar abertas para extensão",
+              "Devem estar fechadas para modificação",
+              "Novos comportamentos são adicionados sem alterar código existente",
+              "Promove estabilidade do sistema",
+              "Reduz risco de introduzir novos erros"
+            ],
+            "examples": [
+              "Criar novas classes que implementam uma interface existente",
+              "Estender comportamento usando herança ou composição"
+            ]
+          }
+        },
+        {
+          "id": "solid-lsp",
+          "title": "SOLID — Liskov Substitution Principle (LSP)",
+          "back": {
+            "keyQuestion": "Qual é a ideia central do Liskov Substitution Principle?",
+            "characteristics": [
+              "Subclasses devem poder substituir suas classes base",
+              "A substituição não deve alterar o comportamento esperado",
+              "Garante uso correto de herança e polimorfismo",
+              "Evita que subclasses quebrem regras da classe pai",
+              "Promove consistência no design orientado a objetos"
+            ],
+            "examples": [
+              "Uma subclasse deve respeitar os contratos definidos pela classe base",
+              "Evitar subclasses que alterem regras fundamentais do comportamento"
+            ]
+          }
+        },
+        {
+          "id": "solid-isp",
+          "title": "SOLID — Interface Segregation Principle (ISP)",
+          "back": {
+            "keyQuestion": "Qual é a ideia central do Interface Segregation Principle?",
+            "characteristics": [
+              "Interfaces devem ser pequenas e específicas",
+              "Clientes não devem depender de métodos que não utilizam",
+              "Evita interfaces grandes e genéricas",
+              "Reduz acoplamento entre componentes",
+              "Facilita manutenção e evolução do sistema"
+            ],
+            "examples": [
+              "Separar uma interface grande em várias interfaces menores",
+              "Criar interfaces específicas para cada tipo de comportamento"
+            ]
+          }
+        },
+        {
+          "id": "solid-dip",
+          "title": "SOLID — Dependency Inversion Principle (DIP)",
+          "back": {
+            "keyQuestion": "Qual é a ideia central do Dependency Inversion Principle?",
+            "characteristics": [
+              "Módulos de alto nível não devem depender de módulos de baixo nível",
+              "Ambos devem depender de abstrações",
+              "Abstrações não devem depender de detalhes",
+              "Detalhes devem depender de abstrações",
+              "Promove baixo acoplamento entre componentes"
+            ],
+            "examples": [
+              "Uma classe depender de uma interface em vez de uma implementação concreta",
+              "Uso de injeção de dependência para fornecer implementações"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "clean-architecture",
+      "title": "Clean Architecture (Arquitetura Limpa)",
+      "heraldic": "clean-architecture",
+      "cards": [
+        {
+          "id": "clean-architecture",
+          "title": "Clean Architecture (Arquitetura Limpa)",
+          "back": {
+            "keyQuestion": "Qual é o princípio central da Clean Architecture?",
+            "characteristics": [
+              "Organiza o sistema em camadas concêntricas",
+              "Regras de negócio ficam no centro da arquitetura",
+              "Dependências sempre apontam para dentro",
+              "Detalhes técnicos ficam nas camadas externas",
+              "Promove baixo acoplamento e alta testabilidade"
+            ],
+            "examples": [
+              "Entidades e casos de uso independentes de frameworks",
+              "Controllers e interfaces nas camadas externas"
+            ]
+          }
+        },
+        {
+          "id": "clean-architecture-entities",
+          "title": "Clean Architecture — Entidades",
+          "back": {
+            "keyQuestion": "Qual é o papel das entidades na Clean Architecture?",
+            "characteristics": [
+              "Representam as regras de negócio do domínio",
+              "Ficam no núcleo da arquitetura",
+              "Independentes de frameworks e tecnologias",
+              "Contêm lógica de negócio crítica do sistema",
+              "São as partes mais estáveis da aplicação"
+            ],
+            "examples": [
+              "Classe que representa uma regra de cálculo de negócio",
+              "Entidade de domínio como Pedido, Usuário ou Conta"
+            ]
+          }
+        },
+        {
+          "id": "clean-architecture-use-cases",
+          "title": "Clean Architecture — Casos de Uso",
+          "back": {
+            "keyQuestion": "Qual é o papel dos casos de uso na Clean Architecture?",
+            "characteristics": [
+              "Definem as ações que o sistema pode executar",
+              "Coordenam o fluxo das regras de negócio",
+              "Orquestram o uso das entidades",
+              "Independentes de interface e infraestrutura",
+              "Representam funcionalidades da aplicação"
+            ],
+            "examples": [
+              "Caso de uso para criar um pedido",
+              "Caso de uso para processar pagamento"
+            ]
+          }
+        },
+        {
+          "id": "clean-architecture-interface-adapters",
+          "title": "Clean Architecture — Interface Adapters",
+          "back": {
+            "keyQuestion": "Qual é o papel da camada de interface adapters na Clean Architecture?",
+            "characteristics": [
+              "Adapta dados entre o domínio e o mundo externo",
+              "Traduz informações entre casos de uso e interfaces",
+              "Isola o domínio de detalhes de infraestrutura",
+              "Inclui controllers, presenters e gateways",
+              "Conecta a aplicação com interfaces externas"
+            ],
+            "examples": [
+              "Controller que recebe requisição HTTP",
+              "Presenter que formata dados para a interface",
+              "Gateway que comunica com o banco de dados"
+            ]
+          }
+        },
+        {
+          "id": "clean-architecture-frameworks",
+          "title": "Clean Architecture — Frameworks & Drivers",
+          "back": {
+            "keyQuestion": "Qual é o papel da camada de frameworks na Clean Architecture?",
+            "characteristics": [
+              "Camada mais externa da arquitetura",
+              "Contém frameworks e tecnologias específicas",
+              "Inclui banco de dados, UI e bibliotecas externas",
+              "Considerada um detalhe da aplicação",
+              "Depende das camadas internas, nunca o contrário"
+            ],
+            "examples": [
+              "Framework web como Spring ou Express",
+              "Banco de dados como PostgreSQL ou MongoDB",
+              "Interface gráfica ou API REST"
+            ]
+          }
+        },
+        {
+          "id": "clean-architecture-dependency-rule",
+          "title": "Clean Architecture — Dependency Rule",
+          "back": {
+            "keyQuestion": "Qual é a regra fundamental da Clean Architecture?",
+            "characteristics": [
+              "Dependências sempre apontam para dentro",
+              "Camadas externas dependem das internas",
+              "Camadas internas não dependem das externas",
+              "O domínio permanece independente de tecnologia",
+              "Protege as regras de negócio de mudanças externas"
+            ],
+            "examples": [
+              "Entidades não dependem de frameworks ou banco de dados",
+              "Casos de uso não dependem de interface gráfica ou APIs"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "angular-framework",
+      "title": "Angular Framework",
+      "heraldic": "angular-framework",
+      "cards": [
+        {
+          "id": "angular",
+          "title": "Angular",
+          "back": {
+            "keyQuestion": "O que é Angular?",
+            "characteristics": [
+              "Framework front-end para construção de aplicações web",
+              "Baseado em TypeScript",
+              "Arquitetura baseada em componentes",
+              "Mantido e desenvolvido pelo Google",
+              "Suporte nativo a SPA (Single Page Application)",
+              "Possui sistema de roteamento",
+              "Utiliza data binding",
+              "Utiliza injeção de dependência"
+            ],
+            "examples": [
+              "Construção de aplicações web dinâmicas",
+              "Aplicações corporativas complexas"
+            ]
+          }
+        },
+        {
+          "id": "spa",
+          "title": "SPA (Single Page Application)",
+          "back": {
+            "keyQuestion": "O que caracteriza uma SPA?",
+            "characteristics": [
+              "Carrega apenas uma página HTML inicial",
+              "Interface atualizada dinamicamente via JavaScript",
+              "Navegação ocorre no lado do cliente (client-side)",
+              "Comunicação com servidor via APIs",
+              "Utiliza roteamento interno"
+            ],
+            "examples": [
+              "Aplicações desenvolvidas com Angular",
+              "Aplicações React ou Vue"
+            ]
+          }
+        },
+        {
+          "id": "spa-vs-mpa",
+          "title": "SPA × MPA",
+          "back": {
+            "keyQuestion": "Qual é a principal diferença entre SPA e MPA?",
+            "characteristics": [
+              "SPA utiliza uma única página HTML",
+              "MPA utiliza múltiplas páginas",
+              "SPA faz navegação interna via JavaScript",
+              "MPA recarrega a página a cada navegação",
+              "SPA executa mais processamento no cliente",
+              "MPA executa mais processamento no servidor"
+            ],
+            "examples": [
+              "SPA: Gmail, aplicações Angular ou React",
+              "MPA: sites institucionais tradicionais"
+            ]
+          }
+        },
+        {
+          "id": "angular-pipes",
+          "title": "Angular — Pipes",
+          "back": {
+            "keyQuestion": "O que são Pipes no Angular?",
+            "characteristics": [
+              "Transformam dados diretamente no template",
+              "Alteram apenas a forma de exibição",
+              "Não modificam o dado original",
+              "Permitem formatação declarativa na interface",
+              "Podem ser nativos ou customizados"
+            ],
+            "examples": [
+              "date → formatação de datas",
+              "currency → formatação de valores monetários",
+              "uppercase → transformar texto em maiúsculo"
+            ]
+          }
+        },
+        {
+          "id": "pwa",
+          "title": "PWA (Progressive Web App)",
+          "back": {
+            "keyQuestion": "O que é um PWA (Progressive Web App)?",
+            "characteristics": [
+              "Aplicação web com experiência semelhante a app nativo",
+              "Pode ser instalada no dispositivo",
+              "Pode funcionar offline ou parcialmente offline",
+              "Utiliza cache inteligente no navegador",
+              "Pode criar ícone na tela inicial"
+            ],
+            "examples": [
+              "Aplicações web instaláveis no celular",
+              "Apps web que funcionam mesmo sem conexão total"
+            ]
+          }
+        },
+        {
+          "id": "service-worker",
+          "title": "Service Worker",
+          "back": {
+            "keyQuestion": "O que é um Service Worker?",
+            "characteristics": [
+              "Script executado em segundo plano pelo navegador",
+              "Permite funcionamento offline em aplicações web",
+              "Intercepta requisições HTTP",
+              "Gerencia cache de recursos",
+              "Melhora performance da aplicação"
+            ],
+            "examples": [
+              "Cache de arquivos para acesso offline",
+              "Interceptação de requisições para servir conteúdo em cache"
+            ]
+          }
+        },
+        {
+          "id": "dependency-injection",
+          "title": "Angular — Dependency Injection",
+          "back": {
+            "keyQuestion": "O que é Injeção de Dependência?",
+            "characteristics": [
+              "Padrão de projeto para fornecer dependências externamente",
+              "A classe não cria suas próprias dependências",
+              "Reduz acoplamento entre componentes",
+              "Facilita testes unitários",
+              "É um recurso nativo do Angular"
+            ],
+            "examples": [
+              "Angular injeta serviços automaticamente via construtor",
+              "Componentes recebem serviços sem usar new"
+            ]
+          }
+        },
+        {
+          "id": "angular-ngmodel",
+          "title": "Angular — ngModel",
+          "back": {
+            "keyQuestion": "O que é [(ngModel)] no Angular?",
+            "characteristics": [
+              "Diretiva usada para two-way data binding",
+              "Sincroniza dados entre template e componente",
+              "Pertence ao módulo FormsModule",
+              "Atualiza automaticamente view e modelo",
+              "Usada principalmente em Template-driven forms"
+            ],
+            "examples": [
+              "<input [(ngModel)]=\"nome\">",
+              "Alterar o input atualiza a variável e vice-versa"
+            ]
+          }
+        },
+        {
+          "id": "angular-data-binding",
+          "title": "Angular — Data Binding",
+          "back": {
+            "keyQuestion": "O que é Data Binding no Angular?",
+            "characteristics": [
+              "Mecanismo que conecta dados do componente à view",
+              "Permite sincronização entre TypeScript e template HTML",
+              "Atualiza automaticamente a interface quando os dados mudam",
+              "Pode ocorrer em diferentes direções",
+              "É um dos principais recursos do Angular"
+            ],
+            "examples": [
+              "{{ nome }} → interpolação",
+              "[value]=\"nome\" → property binding",
+              "(click)=\"salvar()\" → event binding",
+              "[(ngModel)]=\"nome\" → two-way binding"
+            ]
+          }
+        },
+        {
+          "id": "angular-property-binding",
+          "title": "Angular — Property Binding",
+          "back": {
+            "keyQuestion": "O que é Property Binding no Angular?",
+            "characteristics": [
+              "Permite enviar dados do componente para o template",
+              "Atualiza propriedades de elementos HTML",
+              "Usa colchetes [] na sintaxe",
+              "Fluxo de dados ocorre do componente para a view",
+              "É um tipo de data binding unidirecional"
+            ],
+            "examples": [
+              "[value]=\"nome\"",
+              "[src]=\"imagemUrl\"",
+              "[disabled]=\"isDisabled\""
+            ]
+          }
+        },
+        {
+          "id": "angular-event-binding",
+          "title": "Angular — Event Binding",
+          "back": {
+            "keyQuestion": "O que é Event Binding no Angular?",
+            "characteristics": [
+              "Permite capturar eventos da interface",
+              "Executa métodos do componente em resposta a eventos",
+              "Usa parênteses () na sintaxe",
+              "Fluxo de dados ocorre da view para o componente",
+              "É um tipo de data binding unidirecional"
+            ],
+            "examples": [
+              "(click)=\"salvar()\"",
+              "(input)=\"atualizarValor($event)\"",
+              "(mouseover)=\"mostrarTooltip()\""
+            ]
+          }
+        },
+        {
+          "id": "angular-diretivas",
+          "title": "Angular — Diretivas",
+          "back": {
+            "keyQuestion": "O que são Diretivas no Angular?",
+            "characteristics": [
+              "Instruções que modificam o comportamento ou estrutura do DOM",
+              "Permitem controlar como elementos HTML são exibidos",
+              "São usadas diretamente no template",
+              "Podem alterar aparência ou estrutura da interface",
+              "São um dos principais recursos do Angular"
+            ],
+            "examples": [
+              "*ngIf → exibição condicional",
+              "*ngFor → repetição de elementos",
+              "[ngClass] → aplicação dinâmica de classes"
+            ]
+          }
+        },
+        {
+          "id": "angular-forms-module",
+          "title": "Angular — FormsModule",
+          "back": {
+            "keyQuestion": "O que é FormsModule no Angular?",
+            "characteristics": [
+              "Módulo usado para trabalhar com formulários baseados em template",
+              "Habilita o uso da diretiva ngModel",
+              "Permite two-way data binding em formulários",
+              "Faz parte do pacote @angular/forms",
+              "Usado em Template-driven forms"
+            ],
+            "examples": [
+              "Importação do FormsModule no módulo da aplicação",
+              "Uso de [(ngModel)] em inputs de formulários"
+            ]
+          }
+        },
+        {
+          "id": "angular-change-detection",
+          "title": "Angular — Change Detection",
+          "back": {
+            "keyQuestion": "O que é Change Detection no Angular?",
+            "characteristics": [
+              "Mecanismo que detecta mudanças nos dados do componente",
+              "Atualiza automaticamente a interface (view)",
+              "Executado sempre que ocorre um evento ou mudança de estado",
+              "Permite sincronização entre modelo e template",
+              "É parte fundamental do funcionamento do Angular"
+            ],
+            "examples": [
+              "Atualizar variável no componente reflete automaticamente na interface",
+              "Evento de usuário dispara atualização da view"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "typescript-ts",
+      "title": "Typescript - TS",
+      "heraldic": "typescript-ts",
+      "cards": [
+        {
+          "id": "typescript",
+          "title": "TypeScript",
+          "back": {
+            "keyQuestion": "O que é TypeScript?",
+            "characteristics": [
+              "Superset do JavaScript",
+              "Adiciona tipagem estática opcional",
+              "Mantido pela Microsoft",
+              "Compila para JavaScript",
+              "Facilita manutenção e escalabilidade de aplicações"
+            ],
+            "examples": [
+              "Uso de tipos como string, number e boolean",
+              "Definição de interfaces e classes tipadas"
+            ]
+          }
+        },
+        {
+          "id": "typescript-primitive-types",
+          "title": "TypeScript — Tipos Primitivos",
+          "back": {
+            "keyQuestion": "Quais são os principais tipos primitivos do TypeScript?",
+            "characteristics": [
+              "string → texto",
+              "number → números",
+              "boolean → verdadeiro ou falso",
+              "null e undefined → ausência de valor",
+              "any → desativa a tipagem",
+              "unknown → exige validação antes do uso"
+            ],
+            "examples": [
+              "let nome: string = 'Willian';",
+              "let idade: number = 30;",
+              "let ativo: boolean = true;"
+            ]
+          }
+        },
+        {
+          "id": "typescript-type-inference",
+          "title": "TypeScript — Inferência de Tipo",
+          "back": {
+            "keyQuestion": "O que é Inferência de Tipo no TypeScript?",
+            "characteristics": [
+              "O TypeScript deduz automaticamente o tipo de uma variável",
+              "Baseia-se no valor atribuído",
+              "Evita necessidade de tipagem explícita",
+              "Mantém segurança de tipos durante a compilação",
+              "Facilita escrita de código mais concisa"
+            ],
+            "examples": [
+              "let cidade = 'Florianópolis'; → inferido como string",
+              "let idade = 30; → inferido como number"
+            ]
+          }
+        },
+        {
+          "id": "typescript-typed-functions",
+          "title": "TypeScript — Funções Tipadas",
+          "back": {
+            "keyQuestion": "Como funciona a tipagem de funções no TypeScript?",
+            "characteristics": [
+              "Permite definir tipos para parâmetros",
+              "Permite definir tipo de retorno da função",
+              "Aumenta segurança e previsibilidade do código",
+              "Pode ser usada em funções tradicionais ou arrow functions",
+              "O TypeScript valida os tipos em tempo de compilação"
+            ],
+            "examples": [
+              "function somar(a: number, b: number): number",
+              "const subtrair = (a: number, b: number): number => a - b"
+            ]
+          }
+        },
+        {
+          "id": "typescript-optional-parameters",
+          "title": "TypeScript — Parâmetros Opcionais",
+          "back": {
+            "keyQuestion": "O que são parâmetros opcionais no TypeScript?",
+            "characteristics": [
+              "São parâmetros que podem ou não ser informados na chamada da função",
+              "São definidos usando o símbolo ? após o nome do parâmetro",
+              "Devem aparecer após os parâmetros obrigatórios",
+              "Permitem maior flexibilidade na chamada da função"
+            ],
+            "examples": [
+              "function saudacao(nome: string, titulo?: string)",
+              "saudacao('João')",
+              "saudacao('João', 'Dr.')"
+            ]
+          }
+        },
+        {
+          "id": "typescript-interface",
+          "title": "TypeScript — Interface",
+          "back": {
+            "keyQuestion": "O que é uma Interface no TypeScript?",
+            "characteristics": [
+              "Define a estrutura de um objeto",
+              "Especifica propriedades e seus tipos",
+              "Funciona como um contrato de dados",
+              "Não contém implementação",
+              "É usada para tipar objetos e estruturas de dados"
+            ],
+            "examples": [
+              "interface Usuario { id: number; nome: string; ativo: boolean }",
+              "const user: Usuario = { id: 1, nome: 'Ana', ativo: true }"
+            ]
+          }
+        },
+        {
+          "id": "typescript-type-alias",
+          "title": "TypeScript — Type Alias",
+          "back": {
+            "keyQuestion": "O que é Type Alias no TypeScript?",
+            "characteristics": [
+              "Define um novo nome para um tipo",
+              "Permite criar union types",
+              "Pode representar tipos primitivos, objetos ou combinações",
+              "Oferece maior flexibilidade na definição de tipos"
+            ],
+            "examples": [
+              "type Status = 'ativo' | 'inativo'",
+              "let situacao: Status = 'ativo'"
+            ]
+          }
+        },
+        {
+          "id": "typescript-classes",
+          "title": "TypeScript — Classes",
+          "back": {
+            "keyQuestion": "O que são Classes no TypeScript?",
+            "characteristics": [
+              "Definem objetos com propriedades e métodos",
+              "Permitem aplicar conceitos de orientação a objetos",
+              "Suportam tipagem estática",
+              "Possuem construtor para inicialização",
+              "Podem implementar interfaces"
+            ],
+            "examples": [
+              "class Pessoa { nome: string }",
+              "constructor(nome: string)",
+              "métodos como apresentar()"
+            ]
+          }
+        },
+        {
+          "id": "typescript-access-modifiers",
+          "title": "TypeScript — Modificadores de Acesso",
+          "back": {
+            "keyQuestion": "Quais são os modificadores de acesso no TypeScript?",
+            "characteristics": [
+              "public → acessível em qualquer lugar (padrão)",
+              "private → acessível apenas dentro da classe",
+              "protected → acessível na classe e em subclasses",
+              "readonly → propriedade só pode ser definida na inicialização"
+            ],
+            "examples": [
+              "class Conta { private saldo: number = 0; }",
+              "readonly id: number"
+            ]
+          }
+        },
+        {
+          "id": "typescript-inheritance",
+          "title": "TypeScript — Herança",
+          "back": {
+            "keyQuestion": "O que é Herança no TypeScript?",
+            "characteristics": [
+              "Permite que uma classe herde propriedades e métodos de outra",
+              "Promove reutilização de código",
+              "Utiliza a palavra-chave extends",
+              "A classe derivada pode adicionar ou sobrescrever comportamentos"
+            ],
+            "examples": [
+              "class Funcionario extends Pessoa {}",
+              "A classe Funcionario herda características de Pessoa"
+            ]
+          }
+        },
+        {
+          "id": "typescript-generics",
+          "title": "TypeScript — Generics",
+          "back": {
+            "keyQuestion": "O que são Generics no TypeScript?",
+            "characteristics": [
+              "Permitem criar funções e estruturas reutilizáveis",
+              "Mantêm segurança de tipos",
+              "Usam parâmetros de tipo como <T>",
+              "O tipo é definido no momento do uso",
+              "Evita uso de any mantendo tipagem"
+            ],
+            "examples": [
+              "function identidade<T>(valor: T): T",
+              "identidade<string>('teste')",
+              "identidade<number>(10)"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "angular-typescript",
+      "title": "Angular & Typescript",
+      "heraldic": "angular-typescript",
+      "cards": [
+        {
+          "id": "angular-typescript-relacao",
+          "title": "Angular + TypeScript",
+          "back": {
+            "keyQuestion": "Qual é a relação entre Angular e TypeScript?",
+            "characteristics": [
+              "Angular é um framework front-end criado pelo Google",
+              "É totalmente baseado em TypeScript",
+              "Utiliza tipagem estática e recursos de orientação a objetos",
+              "Grande parte da arquitetura Angular depende de recursos do TypeScript"
+            ],
+            "examples": [
+              "Componentes Angular são classes TypeScript",
+              "Serviços Angular utilizam injeção de dependência tipada"
+            ]
+          }
+        },
+        {
+          "id": "angular-typescript-recursos",
+          "title": "Angular — Recursos do TypeScript",
+          "back": {
+            "keyQuestion": "Quais recursos do TypeScript são amplamente utilizados no Angular?",
+            "characteristics": [
+              "Classes",
+              "Interfaces",
+              "Decorators",
+              "Injeção de dependência",
+              "Tipagem estática"
+            ],
+            "examples": [
+              "Componentes são classes",
+              "Services usam injeção de dependência"
+            ]
+          }
+        },
+        {
+          "id": "angular-component-decorator",
+          "title": "Angular — Decorator @Component",
+          "back": {
+            "keyQuestion": "O que faz o decorator @Component no Angular?",
+            "characteristics": [
+              "Define um componente Angular",
+              "Associa classe TypeScript ao template HTML",
+              "Configura metadados do componente",
+              "Utiliza decorators do TypeScript"
+            ],
+            "examples": [
+              "@Component({ selector: 'app-root' })",
+              "export class AppComponent {}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "jdbc-java-database-connectivity",
+      "title": "JDBC - Java Database Connectivity",
+      "heraldic": "jdbc-java-database-connectivity",
+      "cards": [
+        {
+          "id": "jdbc",
+          "title": "JDBC",
+          "back": {
+            "keyQuestion": "O que é JDBC?",
+            "characteristics": [
+              "API padrão do Java para acesso a bancos de dados relacionais",
+              "Permite executar comandos SQL a partir de aplicações Java",
+              "Funciona como ponte entre aplicação e banco de dados",
+              "Utiliza drivers JDBC específicos para cada banco"
+            ],
+            "examples": [
+              "Aplicação Java → JDBC → Driver → Banco de Dados",
+              "Drivers para MySQL, PostgreSQL, Oracle"
+            ]
+          }
+        },
+        {
+          "id": "jdbc-architecture",
+          "title": "JDBC — Arquitetura",
+          "back": {
+            "keyQuestion": "Como funciona a arquitetura do JDBC?",
+            "characteristics": [
+              "JDBC utiliza uma arquitetura baseada em objetos para comunicação com bancos de dados",
+              "A aplicação Java interage com drivers JDBC específicos",
+              "Esses drivers traduzem chamadas Java para comandos do banco",
+              "Cada etapa da comunicação utiliza componentes da API JDBC"
+            ],
+            "examples": [
+              "Aplicação Java → Driver JDBC → Banco de Dados",
+              "DriverManager, Connection, Statement e ResultSet"
+            ]
+          }
+        },
+        {
+          "id": "jdbc-classic-flow",
+          "title": "JDBC — Fluxo Clássico",
+          "back": {
+            "keyQuestion": "Qual é a sequência clássica de uso do JDBC?",
+            "characteristics": [
+              "Carregar o driver JDBC (opcional nas versões modernas)",
+              "Obter uma conexão com o banco de dados",
+              "Criar um Statement ou PreparedStatement",
+              "Executar o comando SQL",
+              "Processar o ResultSet retornado",
+              "Fechar os recursos utilizados"
+            ],
+            "examples": [
+              "Driver → Connection → Statement → SQL → ResultSet → Close"
+            ]
+          }
+        },
+        {
+          "id": "jdbc-connection",
+          "title": "JDBC — Connection",
+          "back": {
+            "keyQuestion": "O que representa a interface Connection no JDBC?",
+            "characteristics": [
+              "Representa uma conexão ativa com o banco de dados",
+              "Permite criar objetos para executar comandos SQL",
+              "Controla transações",
+              "Gerencia commit e rollback"
+            ],
+            "examples": [
+              "createStatement()",
+              "prepareStatement()",
+              "setAutoCommit(false)",
+              "commit()",
+              "rollback()",
+              "close()"
+            ]
+          }
+        },
+        {
+          "id": "jdbc-statement",
+          "title": "JDBC — Statement",
+          "back": {
+            "keyQuestion": "O que é Statement no JDBC?",
+            "characteristics": [
+              "Interface usada para executar comandos SQL simples",
+              "Executa SQL diretamente no banco de dados",
+              "Não possui parametrização de valores",
+              "Mais suscetível a SQL Injection"
+            ],
+            "examples": [
+              "Statement stmt = conn.createStatement();",
+              "stmt.executeQuery(\"SELECT * FROM usuarios\");"
+            ]
+          }
+        },
+        {
+          "id": "jdbc-prepared-statement",
+          "title": "JDBC — PreparedStatement",
+          "back": {
+            "keyQuestion": "O que é PreparedStatement no JDBC?",
+            "characteristics": [
+              "Interface usada para executar SQL parametrizado",
+              "Pré-compila a consulta SQL",
+              "Aceita parâmetros usando placeholders (?)",
+              "Evita SQL Injection",
+              "Melhora desempenho em consultas repetidas"
+            ],
+            "examples": [
+              "SELECT * FROM usuario WHERE id = ?",
+              "PreparedStatement ps = conn.prepareStatement(sql)"
+            ]
+          }
+        },
+        {
+          "id": "jdbc-callable-statement",
+          "title": "JDBC — CallableStatement",
+          "back": {
+            "keyQuestion": "Para que serve o CallableStatement no JDBC?",
+            "characteristics": [
+              "Executa Stored Procedures no banco de dados",
+              "Permite passar parâmetros de entrada e saída",
+              "Utiliza sintaxe específica para chamadas de procedimento",
+              "É usado quando a lógica está no banco"
+            ],
+            "examples": [
+              "{ call buscar_usuario(?) }",
+              "CallableStatement cs = conn.prepareCall(sql)"
+            ]
+          }
+        },
+        {
+          "id": "jdbc-resultset",
+          "title": "JDBC — ResultSet",
+          "back": {
+            "keyQuestion": "O que é ResultSet no JDBC?",
+            "characteristics": [
+              "Representa o resultado de uma consulta SQL",
+              "Funciona como uma tabela em memória",
+              "Permite percorrer os registros retornados",
+              "Utiliza um cursor interno para navegação"
+            ],
+            "examples": [
+              "next()",
+              "getString()",
+              "getInt()",
+              "previous() em ResultSet scrollable"
+            ]
+          }
+        },
+        {
+          "id": "jdbc-transactions",
+          "title": "JDBC — Transações",
+          "back": {
+            "keyQuestion": "Como funcionam as transações no JDBC?",
+            "characteristics": [
+              "Por padrão o JDBC usa autoCommit = true",
+              "Cada comando SQL é confirmado automaticamente",
+              "É possível desativar o autoCommit para controlar transações manualmente",
+              "commit() confirma alterações",
+              "rollback() desfaz alterações em caso de erro"
+            ],
+            "examples": [
+              "connection.setAutoCommit(false)",
+              "connection.commit()",
+              "connection.rollback()"
+            ]
+          }
+        },
+        {
+          "id": "jdbc-sql-exception",
+          "title": "JDBC — SQLException",
+          "back": {
+            "keyQuestion": "O que é SQLException no JDBC?",
+            "characteristics": [
+              "Exceção lançada quando ocorre erro em operações com banco de dados",
+              "Contém informações detalhadas sobre o erro",
+              "É uma checked exception",
+              "Deve ser tratada com try-catch ou declarada com throws"
+            ],
+            "examples": ["getMessage()", "getSQLState()", "getErrorCode()"]
+          }
+        },
+        {
+          "id": "jdbc-best-practices",
+          "title": "JDBC — Boas Práticas",
+          "back": {
+            "keyQuestion": "Quais são boas práticas ao usar JDBC?",
+            "characteristics": [
+              "Sempre fechar recursos após uso",
+              "Fechar na ordem inversa de criação",
+              "Evitar vazamento de conexões",
+              "Preferir try-with-resources quando possível"
+            ],
+            "examples": [
+              "ResultSet → Statement → Connection",
+              "Uso de try-with-resources"
+            ]
+          }
+        },
+        {
+          "id": "jdbc-connection-pool",
+          "title": "JDBC — Connection Pool",
+          "back": {
+            "keyQuestion": "O que é Connection Pool no acesso a banco de dados?",
+            "characteristics": [
+              "Técnica para reutilizar conexões com o banco",
+              "Evita abrir e fechar conexão a cada operação",
+              "Melhora performance e escalabilidade",
+              "Mantém um conjunto de conexões disponíveis"
+            ],
+            "examples": ["HikariCP", "C3P0"]
+          }
+        },
+        {
+          "id": "jdbc-security-prepared",
+          "title": "JDBC — Segurança",
+          "back": {
+            "keyQuestion": "Qual prática evita SQL Injection no JDBC?",
+            "characteristics": [
+              "Nunca concatenar dados do usuário diretamente em SQL",
+              "Utilizar PreparedStatement com parâmetros",
+              "Separar estrutura da consulta dos valores",
+              "Aumenta segurança da aplicação"
+            ],
+            "examples": [
+              "SELECT * FROM user WHERE nome = ?",
+              "PreparedStatement ps = conn.prepareStatement(sql)"
+            ]
+          }
+        },
+        {
+          "id": "jdbc-driver-types",
+          "title": "JDBC — Tipos de Driver",
+          "back": {
+            "keyQuestion": "Quais são os tipos de drivers JDBC?",
+            "characteristics": [
+              "Tipo 1: Ponte JDBC-ODBC (obsoleto)",
+              "Tipo 2: Driver nativo",
+              "Tipo 3: Driver baseado em middleware",
+              "Tipo 4: Driver puro Java"
+            ],
+            "examples": ["Tipo 4 é o mais utilizado atualmente"]
+          }
+        },
+        {
+          "id": "jdbc-architecture-layer",
+          "title": "JDBC — Arquitetura",
+          "back": {
+            "keyQuestion": "Em qual camada da arquitetura o JDBC deve ser utilizado?",
+            "characteristics": [
+              "JDBC pertence à camada de acesso a dados",
+              "É normalmente usado em DAO ou Repository",
+              "Responsável pela comunicação com o banco de dados",
+              "Não deve estar na camada de apresentação"
+            ],
+            "examples": ["DAO (Data Access Object)", "Repository"]
+          }
+        },
+        {
+          "id": "jdbc-oracle-connection",
+          "title": "JDBC — Conexão Oracle",
+          "back": {
+            "keyQuestion": "Como é feita a conexão JDBC com banco Oracle?",
+            "characteristics": [
+              "Utiliza o driver oracle.jdbc.driver.OracleDriver",
+              "A conexão é definida através de uma URL JDBC",
+              "A URL especifica tipo de driver, host, porta e instância do banco"
+            ],
+            "examples": ["jdbc:oracle:thin:@localhost:1521:xe"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "oracle-database",
+      "title": "Oracle Database",
+      "heraldic": "oracle-database",
+      "cards": [
+        {
+          "id": "oracle-datafiles",
+          "title": "Oracle — Datafiles",
+          "back": {
+            "keyQuestion": "O que são Datafiles no Oracle Database?",
+            "characteristics": [
+              "Arquivos físicos onde os dados do banco são armazenados",
+              "Pertencem a um tablespace",
+              "Armazenam tabelas, índices e outros objetos do banco",
+              "Podem crescer automaticamente (autoextend)",
+              "Um tablespace pode possuir vários datafiles"
+            ],
+            "examples": [
+              "Dados de usuários",
+              "Tabelas",
+              "Índices",
+              "Views materializadas"
+            ]
+          }
+        },
+        {
+          "id": "oracle-control-files",
+          "title": "Oracle — Control Files",
+          "back": {
+            "keyQuestion": "O que são Control Files no Oracle Database?",
+            "characteristics": [
+              "Arquivos que armazenam metadados críticos do banco",
+              "Guardam informações sobre a estrutura física do banco",
+              "Registram localização de datafiles e redo logs",
+              "Contêm o SCN (System Change Number)",
+              "Sem eles o banco não pode ser aberto"
+            ],
+            "examples": [
+              "Nome do banco",
+              "Localização dos datafiles",
+              "Localização dos redo logs",
+              "Histórico de backup"
+            ]
+          }
+        },
+        {
+          "id": "oracle-redo-logs",
+          "title": "Oracle — Redo Log Files",
+          "back": {
+            "keyQuestion": "Qual é a função dos Redo Log Files no Oracle?",
+            "characteristics": [
+              "Registram todas as alterações feitas no banco de dados",
+              "Permitem recuperação após falhas",
+              "Registram mudanças feitas nas transações",
+              "Não armazenam o dado completo, apenas as alterações",
+              "São essenciais para recuperação e consistência do banco"
+            ],
+            "examples": ["INSERT", "UPDATE", "DELETE", "DDL"]
+          }
+        },
+        {
+          "id": "oracle-redo-log-groups",
+          "title": "Oracle — Redo Log Groups",
+          "back": {
+            "keyQuestion": "Como funcionam os Redo Log Groups no Oracle?",
+            "characteristics": [
+              "Redo logs são organizados em grupos",
+              "Os grupos funcionam de forma rotativa",
+              "Quando um grupo é preenchido, o Oracle passa para o próximo",
+              "Essa troca é chamada de Log Switch",
+              "Permite registro contínuo das alterações do banco"
+            ],
+            "examples": ["Group 1", "Group 2", "Group 3"]
+          }
+        },
+        {
+          "id": "oracle-archived-redo-logs",
+          "title": "Oracle — Archived Redo Logs",
+          "back": {
+            "keyQuestion": "O que são Archived Redo Logs no Oracle?",
+            "characteristics": [
+              "São cópias arquivadas dos redo logs",
+              "Geradas quando o banco está em ARCHIVELOG mode",
+              "Permitem recuperação completa do banco",
+              "Possibilitam recuperação em um ponto específico do tempo"
+            ],
+            "examples": ["Recuperação após falha", "Point-in-time recovery"]
+          }
+        },
+        {
+          "id": "oracle-logical-structure",
+          "title": "Oracle — Estrutura Lógica",
+          "back": {
+            "keyQuestion": "Qual é a hierarquia da estrutura lógica no Oracle?",
+            "characteristics": [
+              "Organiza os dados dentro do banco de forma lógica",
+              "Define como os dados são alocados e gerenciados",
+              "Cada nível subdivide o nível anterior"
+            ],
+            "examples": ["Database", "Tablespace", "Segment", "Extent", "Block"]
+          }
+        },
+        {
+          "id": "oracle-tablespaces",
+          "title": "Oracle — Tablespaces",
+          "back": {
+            "keyQuestion": "O que é um Tablespace no Oracle?",
+            "characteristics": [
+              "Divisão lógica do banco de dados",
+              "Organiza dados e objetos do banco",
+              "Utiliza um ou mais datafiles para armazenamento físico",
+              "Facilita administração e gerenciamento de dados"
+            ],
+            "examples": ["SYSTEM", "SYSAUX", "USERS", "TEMP", "UNDO"]
+          }
+        },
+        {
+          "id": "oracle-segments",
+          "title": "Oracle — Segments",
+          "back": {
+            "keyQuestion": "O que é um Segment no Oracle?",
+            "characteristics": [
+              "Segment representa um objeto do banco de dados",
+              "É formado por um conjunto de extents",
+              "Cada segmento pertence a um tablespace",
+              "Armazena os dados de um objeto específico"
+            ],
+            "examples": ["Tabela", "Índice", "Undo", "Temporary"]
+          }
+        },
+        {
+          "id": "oracle-extents",
+          "title": "Oracle — Extents",
+          "back": {
+            "keyQuestion": "O que é um Extent no Oracle?",
+            "characteristics": [
+              "Extent é um conjunto contíguo de blocos",
+              "Faz parte de um segmento",
+              "Segmentos são compostos por múltiplos extents",
+              "É a unidade de alocação de espaço para crescimento de objetos"
+            ],
+            "examples": [
+              "Tabela crescendo adiciona novos extents",
+              "Índices também utilizam extents"
+            ]
+          }
+        },
+        {
+          "id": "oracle-blocks",
+          "title": "Oracle — Blocks",
+          "back": {
+            "keyQuestion": "O que é um Block no Oracle Database?",
+            "characteristics": [
+              "Menor unidade de armazenamento do Oracle",
+              "Também é a menor unidade de leitura e escrita no banco",
+              "Armazena dados de tabelas e índices",
+              "Faz parte de um extent"
+            ],
+            "examples": ["Tamanho comum de 8 KB"]
+          }
+        },
+        {
+          "id": "oracle-checkpoint",
+          "title": "Oracle — Checkpoint",
+          "back": {
+            "keyQuestion": "O que é um Checkpoint no Oracle Database?",
+            "characteristics": [
+              "Evento que sincroniza dados da memória com os datafiles no disco",
+              "Dados alterados são primeiro armazenados na Buffer Cache",
+              "Durante o checkpoint os blocos sujos são gravados no disco",
+              "Reduz o tempo de recuperação após falhas",
+              "Garante consistência do banco"
+            ],
+            "examples": ["Processos envolvidos: DBWR e CKPT"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "pl-sql",
+      "title": "PL/SQL (Procedural Language/Structured Query Language)",
+      "heraldic": "pl-sql",
+      "cards": [
+        {
+          "id": "plsql-estrutura-bloco",
+          "title": "PL/SQL — Estrutura de Bloco",
+          "back": {
+            "keyQuestion": "Como é estruturado um bloco PL/SQL?",
+            "characteristics": [
+              "PL/SQL é organizado em blocos de código",
+              "Todo programa PL/SQL é composto por pelo menos um bloco",
+              "Possui três seções principais: DECLARE, BEGIN e EXCEPTION",
+              "A seção DECLARE é opcional e usada para declarar variáveis e cursores",
+              "A seção BEGIN é obrigatória e contém os comandos executáveis",
+              "A seção EXCEPTION é opcional e usada para tratamento de erros",
+              "O bloco é encerrado com a palavra-chave END"
+            ],
+            "examples": [
+              "DECLARE para definir variáveis como VARCHAR2 e NUMBER",
+              "BEGIN para executar atribuições ou consultas SQL",
+              "EXCEPTION para tratar erros como NO_DATA_FOUND",
+              "Uso de DBMS_OUTPUT.PUT_LINE para exibir mensagens"
+            ]
+          }
+        },
+        {
+          "id": "plsql-condicionais-if",
+          "title": "PL/SQL — IF / ELSIF / ELSE",
+          "back": {
+            "keyQuestion": "Como funcionam estruturas condicionais em PL/SQL?",
+            "characteristics": [
+              "Permitem executar comandos com base em uma condição",
+              "A estrutura principal utiliza IF, ELSIF e ELSE",
+              "A condição é avaliada como expressão booleana",
+              "ELSIF permite testar múltiplas condições",
+              "ELSE define o caminho padrão caso nenhuma condição seja verdadeira",
+              "A estrutura é encerrada com END IF"
+            ],
+            "examples": [
+              "IF v_salario > 5000 THEN definir bônus maior",
+              "ELSIF v_salario > 3000 THEN definir bônus intermediário",
+              "ELSE definir bônus mínimo",
+              "Uso comum em regras de negócio dentro de procedures ou functions"
+            ]
+          }
+        },
+        {
+          "id": "plsql-cursors",
+          "title": "PL/SQL — Cursores (Cursors)",
+          "back": {
+            "keyQuestion": "O que são cursores (cursors) em PL/SQL?",
+            "characteristics": [
+              "Mecanismo que permite processar linhas retornadas por uma consulta",
+              "Utilizado quando o PL/SQL precisa percorrer resultados linha por linha",
+              "Uma consulta SQL retorna um conjunto de resultados",
+              "O cursor permite iterar sobre esse conjunto",
+              "Pode ser implícito ou explícito",
+              "Muito utilizado em rotinas de processamento de dados"
+            ],
+            "examples": [
+              "Percorrer registros de clientes retornados por um SELECT",
+              "Processar pedidos linha por linha",
+              "Atualizar registros após leitura de uma consulta",
+              "Executar cálculos para cada linha retornada"
+            ]
+          }
+        },
+        {
+          "id": "plsql-cursor-implicito",
+          "title": "PL/SQL — Cursor Implícito",
+          "back": {
+            "keyQuestion": "O que é um cursor implícito em PL/SQL?",
+            "characteristics": [
+              "Criado automaticamente pelo Oracle ao executar comandos SQL",
+              "Utilizado em instruções como INSERT, UPDATE, DELETE e SELECT INTO",
+              "Não precisa ser declarado pelo programador",
+              "Permite verificar informações sobre a execução do comando",
+              "Pode ser acessado através de atributos como SQL%FOUND, SQL%NOTFOUND, SQL%ROWCOUNT e SQL%ISOPEN"
+            ],
+            "examples": [
+              "UPDATE funcionarios SET salario = salario * 1.1",
+              "DELETE FROM pedidos WHERE status = 'CANCELADO'",
+              "INSERT INTO clientes VALUES (...)",
+              "Verificar quantidade de linhas afetadas com SQL%ROWCOUNT"
+            ]
+          }
+        },
+        {
+          "id": "plsql-cursor-explicito",
+          "title": "PL/SQL — Cursor Explícito",
+          "back": {
+            "keyQuestion": "O que é um cursor explícito em PL/SQL e qual é seu fluxo de utilização?",
+            "characteristics": [
+              "Cursor declarado manualmente pelo programador",
+              "Utilizado para processar resultados de uma consulta linha por linha",
+              "Permite maior controle sobre a leitura dos dados",
+              "Segue um fluxo de quatro etapas: DECLARE, OPEN, FETCH e CLOSE",
+              "FETCH recupera cada linha da consulta para variáveis",
+              "Muito utilizado em loops para processamento sequencial de registros"
+            ],
+            "examples": [
+              "Declarar cursor com SELECT de uma tabela",
+              "Abrir cursor com OPEN",
+              "Buscar registros com FETCH dentro de um LOOP",
+              "Encerrar cursor com CLOSE após terminar o processamento"
+            ]
+          }
+        },
+        {
+          "id": "plsql-loops",
+          "title": "PL/SQL — Loops",
+          "back": {
+            "keyQuestion": "Quais estruturas de repetição existem em PL/SQL?",
+            "characteristics": [
+              "Permitem executar comandos repetidamente",
+              "PL/SQL possui três principais tipos de loop: LOOP básico, WHILE LOOP e FOR LOOP",
+              "LOOP básico depende de EXIT ou EXIT WHEN para encerrar",
+              "WHILE LOOP executa enquanto a condição for verdadeira",
+              "FOR LOOP percorre um intervalo definido automaticamente",
+              "FOR LOOP também pode iterar diretamente sobre cursores"
+            ],
+            "examples": [
+              "LOOP com EXIT WHEN para interromper repetição",
+              "WHILE condição LOOP para repetir enquanto a condição for verdadeira",
+              "FOR i IN 1..10 LOOP para iterar em um intervalo numérico",
+              "FOR r IN c_func LOOP para percorrer automaticamente resultados de um cursor"
+            ]
+          }
+        },
+        {
+          "id": "plsql-exceptions",
+          "title": "PL/SQL — Tratamento de Exceções",
+          "back": {
+            "keyQuestion": "Como funciona o tratamento de exceções em PL/SQL?",
+            "characteristics": [
+              "Exceções são usadas para tratar erros durante a execução do código",
+              "O tratamento ocorre na seção EXCEPTION do bloco PL/SQL",
+              "Cada exceção pode executar comandos específicos quando ocorre",
+              "Evita que o programa termine abruptamente em caso de erro",
+              "PL/SQL possui exceções pré-definidas para erros comuns",
+              "Também é possível capturar qualquer erro usando a exceção OTHERS"
+            ],
+            "examples": [
+              "NO_DATA_FOUND quando uma consulta não retorna registros",
+              "TOO_MANY_ROWS quando uma consulta retorna mais de uma linha",
+              "ZERO_DIVIDE quando ocorre divisão por zero",
+              "OTHERS para capturar qualquer erro não tratado explicitamente"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "modelagem-de-dados",
+      "title": "Modelagem de Dados",
+      "heraldic": "modelagem-de-dados",
+      "cards": [
+        {
+          "id": "modelagem-conceitual",
+          "title": "Modelagem de Dados — Conceitual",
+          "back": {
+            "keyQuestion": "Quais são os elementos fundamentais da modelagem de dados conceitual no modelo relacional?",
+            "characteristics": [
+              "Baseada no Modelo Relacional proposto por Edgar F. Codd",
+              "Representa dados de forma abstrata antes da implementação no banco",
+              "Entidade representa um objeto do mundo real",
+              "Atributo representa uma propriedade da entidade",
+              "Relacionamento representa associação entre entidades",
+              "Tupla representa uma linha de uma tabela",
+              "Domínio representa o conjunto de valores possíveis para um atributo"
+            ],
+            "examples": [
+              "Entidade CLIENTE",
+              "Atributos: id_cliente, nome, email",
+              "Tupla representa um registro da tabela CLIENTE",
+              "Domínio de email pode ser um conjunto de valores válidos de endereço eletrônico"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-relacionamento-1-1",
+          "title": "Modelagem de Dados — Relacionamento 1:1",
+          "back": {
+            "keyQuestion": "O que é um relacionamento 1:1 na modelagem de dados?",
+            "characteristics": [
+              "Relacionamento do tipo um para um",
+              "Cada registro de uma entidade está associado a apenas um registro da outra",
+              "E cada registro da segunda entidade se relaciona com apenas um da primeira",
+              "É um relacionamento menos comum em comparação com 1:N",
+              "Pode ser implementado com chave estrangeira ou unificação das tabelas"
+            ],
+            "examples": [
+              "Pessoa — Passaporte",
+              "Usuário — Perfil",
+              "Veículo — Chassi"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-relacionamento-1-n",
+          "title": "Modelagem de Dados — Relacionamento 1:N",
+          "back": {
+            "keyQuestion": "O que é um relacionamento 1:N na modelagem de dados?",
+            "characteristics": [
+              "Relacionamento do tipo um para muitos",
+              "Um registro de uma entidade pode estar associado a vários registros de outra",
+              "Cada registro da segunda entidade se relaciona com apenas um da primeira",
+              "É o tipo de relacionamento mais comum em bancos relacionais",
+              "Normalmente implementado usando chave estrangeira"
+            ],
+            "examples": [
+              "Cliente — Pedido",
+              "Departamento — Funcionários",
+              "Categoria — Produtos"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-relacionamento-n-n",
+          "title": "Modelagem de Dados — Relacionamento N:N",
+          "back": {
+            "keyQuestion": "O que é um relacionamento N:N e como ele é representado no modelo relacional?",
+            "characteristics": [
+              "Relacionamento do tipo muitos para muitos",
+              "Uma entidade pode se relacionar com várias instâncias da outra",
+              "No modelo relacional não pode existir diretamente",
+              "Precisa ser transformado em duas relações 1:N",
+              "A transformação cria uma tabela associativa",
+              "A tabela associativa normalmente possui as chaves estrangeiras das duas entidades"
+            ],
+            "examples": [
+              "Aluno — Curso",
+              "Livro — Autor",
+              "Produto — Pedido",
+              "Tabela associativa: ALUNO_CURSO contendo id_aluno e id_curso"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-chave-primaria",
+          "title": "Modelagem de Dados — Chave Primária (PK)",
+          "back": {
+            "keyQuestion": "O que é uma chave primária (Primary Key) no modelo relacional?",
+            "characteristics": [
+              "Identifica unicamente cada registro de uma tabela",
+              "Não pode possuir valores duplicados",
+              "Não pode possuir valores nulos",
+              "Deve ser estável, evitando mudanças frequentes",
+              "É utilizada como referência para relacionamentos entre tabelas"
+            ],
+            "examples": [
+              "Tabela CLIENTE com id_cliente como chave primária",
+              "Tabela PRODUTO com id_produto como identificador único",
+              "Tabela PEDIDO com id_pedido identificando cada pedido"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-chave-estrangeira",
+          "title": "Modelagem de Dados — Chave Estrangeira (FK)",
+          "back": {
+            "keyQuestion": "O que é uma chave estrangeira (Foreign Key) no modelo relacional?",
+            "characteristics": [
+              "Campo que cria relacionamento entre duas tabelas",
+              "Referencia a chave primária de outra tabela",
+              "Mantém a integridade referencial do banco de dados",
+              "Permite estabelecer relacionamentos entre registros",
+              "Pode aparecer repetida na tabela que a contém"
+            ],
+            "examples": [
+              "pedido.id_cliente referenciando cliente.id_cliente",
+              "pedido.id_cliente é FK apontando para a PK da tabela cliente",
+              "Relacionamento entre CLIENTE e PEDIDO em um modelo 1:N"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-chave-candidata",
+          "title": "Modelagem de Dados — Chave Candidata",
+          "back": {
+            "keyQuestion": "O que é uma chave candidata no modelo relacional?",
+            "characteristics": [
+              "É um atributo ou conjunto de atributos que pode identificar unicamente um registro",
+              "Possui as mesmas propriedades de uma chave primária",
+              "Pode ser escolhida como chave primária da tabela",
+              "Uma tabela pode possuir várias chaves candidatas",
+              "Quando uma delas é escolhida como PK, as outras tornam-se chaves alternativas"
+            ],
+            "examples": [
+              "cpf identificando unicamente uma pessoa",
+              "email único de um usuário",
+              "id gerado pelo sistema"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-chave-alternativa",
+          "title": "Modelagem de Dados — Chave Alternativa",
+          "back": {
+            "keyQuestion": "O que é uma chave alternativa no modelo relacional?",
+            "characteristics": [
+              "É uma chave candidata que não foi escolhida como chave primária",
+              "Continua possuindo a capacidade de identificar unicamente um registro",
+              "Uma tabela pode possuir várias chaves alternativas",
+              "Normalmente possuem restrição de unicidade (UNIQUE)",
+              "São utilizadas como identificadores secundários"
+            ],
+            "examples": [
+              "Tabela USUARIO com id_usuario como PK e cpf como chave alternativa",
+              "Email único de um usuário que não foi escolhido como PK",
+              "Número de matrícula alternativo ao identificador principal"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-integridade-entidade",
+          "title": "Modelagem de Dados — Integridade de Entidade",
+          "back": {
+            "keyQuestion": "O que é integridade de entidade no modelo relacional?",
+            "characteristics": [
+              "Garante que cada registro de uma tabela seja identificado de forma única",
+              "A chave primária não pode possuir valores nulos",
+              "A chave primária deve identificar exclusivamente cada tupla da tabela",
+              "Evita registros sem identificação no banco de dados",
+              "É uma das regras fundamentais do modelo relacional"
+            ],
+            "examples": [
+              "Tabela CLIENTE onde id_cliente é chave primária",
+              "Registro não pode ter id_cliente NULL",
+              "Cada valor de id_cliente deve ser único"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-integridade-referencial",
+          "title": "Modelagem de Dados — Integridade Referencial",
+          "back": {
+            "keyQuestion": "O que é integridade referencial no modelo relacional?",
+            "characteristics": [
+              "Garante consistência entre tabelas relacionadas",
+              "Uma chave estrangeira deve referenciar um valor existente na tabela pai",
+              "Impede criação de registros órfãos",
+              "Mantém coerência entre relacionamentos de entidades",
+              "É aplicada por meio de restrições de chave estrangeira (FOREIGN KEY)"
+            ],
+            "examples": [
+              "pedido.id_cliente deve existir em cliente.id_cliente",
+              "Um pedido não pode referenciar um cliente inexistente",
+              "FK em PEDIDO apontando para a PK da tabela CLIENTE"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-integridade-dominio",
+          "title": "Modelagem de Dados — Integridade de Domínio",
+          "back": {
+            "keyQuestion": "O que é integridade de domínio no modelo relacional?",
+            "characteristics": [
+              "Define o conjunto de valores válidos para um atributo",
+              "Garante que os dados armazenados respeitem o tipo definido",
+              "Pode aplicar regras adicionais como CHECK ou restrições de formato",
+              "Evita inserção de valores inválidos no banco",
+              "Relaciona-se diretamente com tipos de dados e restrições"
+            ],
+            "examples": [
+              "idade INTEGER CHECK (idade >= 0)",
+              "email VARCHAR com formato válido",
+              "salario DECIMAL com valor positivo",
+              "status limitado a valores específicos como 'ativo' ou 'inativo'"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-1fn",
+          "title": "Modelagem de Dados — 1ª Forma Normal (1FN)",
+          "back": {
+            "keyQuestion": "O que caracteriza a Primeira Forma Normal (1FN) na normalização de bancos de dados?",
+            "characteristics": [
+              "Cada atributo deve possuir valores atômicos",
+              "Não pode existir lista ou múltiplos valores em um único campo",
+              "Cada coluna deve armazenar apenas um tipo de dado",
+              "Evita repetição de valores dentro de uma mesma célula",
+              "Estrutura de dados deve permitir manipulação individual dos valores"
+            ],
+            "examples": [
+              "telefone = '9999,8888' é inválido pois contém lista de valores",
+              "Separar telefones em tabela CLIENTE_TELEFONE",
+              "CLIENTE_TELEFONE contendo id_cliente e telefone",
+              "Cada telefone armazenado em um registro separado"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-2fn",
+          "title": "Modelagem de Dados — 2ª Forma Normal (2FN)",
+          "back": {
+            "keyQuestion": "O que caracteriza a Segunda Forma Normal (2FN) na normalização de bancos de dados?",
+            "characteristics": [
+              "A tabela deve estar na Primeira Forma Normal (1FN)",
+              "Não pode existir dependência parcial",
+              "Todos os atributos devem depender da chave primária completa",
+              "O problema ocorre principalmente quando a chave primária é composta",
+              "Atributos que dependem apenas de parte da chave devem ser separados em outra tabela"
+            ],
+            "examples": [
+              "Tabela PEDIDO_ITEM com chave composta (pedido_id, produto_id)",
+              "produto_nome depende apenas de produto_id",
+              "Separação em duas tabelas: PRODUTO e PEDIDO_ITEM",
+              "PRODUTO armazenando produto_id e produto_nome"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-3fn",
+          "title": "Modelagem de Dados — 3ª Forma Normal (3FN)",
+          "back": {
+            "keyQuestion": "O que caracteriza a Terceira Forma Normal (3FN) na normalização de bancos de dados?",
+            "characteristics": [
+              "A tabela deve estar na Segunda Forma Normal (2FN)",
+              "Não pode existir dependência transitiva",
+              "Atributos não chave devem depender apenas da chave primária",
+              "Um atributo não pode depender de outro atributo não chave",
+              "Evita redundância indireta de dados"
+            ],
+            "examples": [
+              "Tabela CLIENTE contendo cidade_id, cidade_nome e estado",
+              "estado depende de cidade_nome ou cidade_id, não da chave do cliente",
+              "Separação em tabela CIDADE contendo cidade_id, cidade_nome e estado",
+              "CLIENTE passa a armazenar apenas cidade_id como referência"
+            ]
+          }
+        },
+        {
+          "id": "sql-ansi",
+          "title": "SQL — Padrão ANSI",
+          "back": {
+            "keyQuestion": "O que é o padrão SQL ANSI e quais comandos são mais cobrados em provas?",
+            "characteristics": [
+              "Padrão de SQL definido pelo American National Standards Institute (ANSI)",
+              "Define sintaxe comum utilizada pelos bancos relacionais",
+              "Permite portabilidade entre diferentes sistemas de banco de dados",
+              "Inclui comandos de consulta, manipulação e definição de dados",
+              "Em provas costuma focar em operações de consulta"
+            ],
+            "examples": [
+              "JOIN para combinar dados de múltiplas tabelas",
+              "GROUP BY para agrupar resultados",
+              "HAVING para filtrar grupos",
+              "Subqueries para consultas dentro de consultas"
+            ]
+          }
+        },
+        {
+          "id": "sql-inner-join",
+          "title": "SQL — INNER JOIN",
+          "back": {
+            "keyQuestion": "O que é um INNER JOIN em SQL?",
+            "characteristics": [
+              "Combina registros de duas tabelas com base em uma condição",
+              "Retorna apenas os registros que possuem correspondência nas duas tabelas",
+              "É o tipo de JOIN mais utilizado em consultas SQL",
+              "Utiliza a cláusula ON para definir a condição de relacionamento",
+              "Baseia-se normalmente em chaves primárias e estrangeiras"
+            ],
+            "examples": [
+              "SELECT * FROM pedido p INNER JOIN cliente c ON p.id_cliente = c.id_cliente",
+              "Consulta retornando pedidos juntamente com dados do cliente",
+              "Relacionamento entre tabela PEDIDO e CLIENTE"
+            ]
+          }
+        },
+        {
+          "id": "sql-left-join",
+          "title": "SQL — LEFT JOIN",
+          "back": {
+            "keyQuestion": "O que é um LEFT JOIN em SQL?",
+            "characteristics": [
+              "Retorna todos os registros da tabela à esquerda da junção",
+              "Inclui também os registros correspondentes da tabela da direita",
+              "Quando não existe correspondência, os campos da tabela da direita retornam NULL",
+              "Muito usado para identificar registros que não possuem relacionamento",
+              "Também chamado de LEFT OUTER JOIN"
+            ],
+            "examples": [
+              "SELECT * FROM cliente c LEFT JOIN pedido p ON c.id_cliente = p.id_cliente",
+              "Lista todos os clientes, mesmo aqueles que não possuem pedidos",
+              "Clientes sem pedidos aparecem com campos de pedido como NULL"
+            ]
+          }
+        },
+        {
+          "id": "sql-right-join",
+          "title": "SQL — RIGHT JOIN",
+          "back": {
+            "keyQuestion": "O que é um RIGHT JOIN em SQL?",
+            "characteristics": [
+              "Retorna todos os registros da tabela à direita da junção",
+              "Inclui os registros correspondentes da tabela da esquerda",
+              "Quando não existe correspondência, os campos da tabela da esquerda retornam NULL",
+              "Também chamado de RIGHT OUTER JOIN",
+              "É menos utilizado que LEFT JOIN em aplicações reais"
+            ],
+            "examples": [
+              "SELECT * FROM cliente c RIGHT JOIN pedido p ON c.id_cliente = p.id_cliente",
+              "Lista todos os pedidos, mesmo que não exista cliente correspondente",
+              "Quando não há correspondência, os dados da tabela cliente aparecem como NULL"
+            ]
+          }
+        },
+        {
+          "id": "sql-full-join",
+          "title": "SQL — FULL JOIN",
+          "back": {
+            "keyQuestion": "O que é um FULL JOIN em SQL?",
+            "characteristics": [
+              "Retorna todos os registros das duas tabelas envolvidas",
+              "Combina registros quando existe correspondência",
+              "Quando não há correspondência, os campos da outra tabela retornam NULL",
+              "Também chamado de FULL OUTER JOIN",
+              "É a união do comportamento do LEFT JOIN e do RIGHT JOIN"
+            ],
+            "examples": [
+              "SELECT * FROM cliente c FULL JOIN pedido p ON c.id_cliente = p.id_cliente",
+              "Lista todos os clientes e todos os pedidos",
+              "Clientes sem pedidos aparecem com campos de pedido NULL",
+              "Pedidos sem cliente aparecem com campos de cliente NULL"
+            ]
+          }
+        },
+        {
+          "id": "sql-where-vs-having",
+          "title": "SQL — WHERE vs HAVING",
+          "back": {
+            "keyQuestion": "Qual a diferença entre WHERE e HAVING em SQL?",
+            "characteristics": [
+              "WHERE filtra linhas antes do agrupamento",
+              "HAVING filtra grupos após o GROUP BY",
+              "WHERE não pode usar funções de agregação",
+              "HAVING é usado com funções agregadas como COUNT, SUM e AVG",
+              "HAVING normalmente aparece junto com GROUP BY"
+            ],
+            "examples": [
+              "WHERE status = 'ativo' filtra registros individuais",
+              "HAVING COUNT(*) > 5 filtra grupos com mais de cinco registros",
+              "Consulta contando pedidos por cliente",
+              "SELECT cliente_id, COUNT(*) FROM pedido GROUP BY cliente_id HAVING COUNT(*) > 5"
+            ]
+          }
+        },
+        {
+          "id": "sql-subqueries",
+          "title": "SQL — Subqueries",
+          "back": {
+            "keyQuestion": "O que são subqueries em SQL e quais são seus principais tipos?",
+            "characteristics": [
+              "Subquery é uma consulta dentro de outra consulta",
+              "Pode ser utilizada em cláusulas como SELECT, WHERE ou FROM",
+              "Permite utilizar o resultado de uma consulta como condição ou valor",
+              "Pode retornar um único valor ou múltiplos registros",
+              "Existem subqueries escalares e correlacionadas"
+            ],
+            "examples": [
+              "Subquery escalar retornando a média de preços",
+              "SELECT * FROM produto WHERE preco > (SELECT AVG(preco) FROM produto)",
+              "Subquery correlacionada que depende da linha da consulta externa",
+              "Consulta que compara valores de cada registro com resultados calculados dinamicamente"
+            ]
+          }
+        },
+        {
+          "id": "modelagem-anomalias",
+          "title": "Modelagem de Dados — Anomalias",
+          "back": {
+            "keyQuestion": "O que são anomalias em banco de dados e quais são os principais tipos?",
+            "characteristics": [
+              "Ocorrem quando o modelo de dados não está devidamente normalizado",
+              "Geram inconsistência e redundância de dados",
+              "Podem causar problemas ao inserir, atualizar ou excluir registros",
+              "São um dos principais motivos para aplicação da normalização",
+              "Os três tipos principais são inserção, atualização e exclusão"
+            ],
+            "examples": [
+              "Anomalia de inserção quando não é possível inserir dados sem outros dados relacionados",
+              "Anomalia de atualização quando uma informação precisa ser alterada em várias linhas",
+              "Anomalia de exclusão quando a remoção de um registro apaga informações importantes",
+              "Tabela que mistura dados de clientes e pedidos gerando redundância"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "controle-de-transacoes",
+      "title": "Controle de Transações",
+      "heraldic": "controle-de-transacoes",
+      "cards": [
+        {
+          "id": "transacao-conceito",
+          "title": "Controle de Transações — Transações (Transaction)",
+          "back": {
+            "keyQuestion": "O que é uma transação em um banco de dados?",
+            "characteristics": [
+              "É uma unidade lógica de trabalho no banco de dados",
+              "Consiste em um conjunto de operações SQL executadas como um único bloco",
+              "Todas as operações devem ser concluídas com sucesso ou nenhuma deve ser aplicada",
+              "Evita inconsistência de dados em operações relacionadas",
+              "É fundamental em operações críticas como transferências financeiras"
+            ],
+            "examples": [
+              "Transferência bancária entre duas contas",
+              "UPDATE conta SET saldo = saldo - 100 WHERE id = 1",
+              "UPDATE conta SET saldo = saldo + 100 WHERE id = 2",
+              "Uso de BEGIN, COMMIT e ROLLBACK para controlar a transação"
+            ]
+          }
+        },
+        {
+          "id": "transacao-acid-atomicidade",
+          "title": "Controle de Transações — ACID: Atomicidade",
+          "back": {
+            "keyQuestion": "O que significa a propriedade de Atomicidade nas transações de banco de dados?",
+            "characteristics": [
+              "Garante que a transação seja executada completamente ou não seja executada",
+              "Se qualquer operação da transação falhar, toda a transação é cancelada",
+              "Evita estados intermediários inconsistentes no banco",
+              "É implementada utilizando mecanismos como COMMIT e ROLLBACK"
+            ],
+            "examples": [
+              "Transferência bancária entre duas contas",
+              "Débito em uma conta e crédito em outra devem ocorrer juntos",
+              "Se ocorrer erro após o débito, a operação é desfeita com ROLLBACK"
+            ]
+          }
+        },
+        {
+          "id": "transacao-acid-consistencia",
+          "title": "Controle de Transações — ACID: Consistência",
+          "back": {
+            "keyQuestion": "O que significa a propriedade de Consistência nas transações de banco de dados?",
+            "characteristics": [
+              "Garante que o banco de dados permaneça em um estado válido após a transação",
+              "Todas as regras de integridade do banco devem ser respeitadas",
+              "A transação leva o banco de um estado consistente para outro estado consistente",
+              "Inclui regras como chaves primárias, chaves estrangeiras e restrições de domínio"
+            ],
+            "examples": [
+              "Uma regra pode impedir saldo negativo em uma conta",
+              "Uma FOREIGN KEY impede inserir um pedido sem cliente existente",
+              "Uma restrição CHECK garante que idade >= 0"
+            ]
+          }
+        },
+        {
+          "id": "transacao-acid-isolamento",
+          "title": "Controle de Transações — ACID: Isolamento",
+          "back": {
+            "keyQuestion": "O que significa a propriedade de Isolamento nas transações de banco de dados?",
+            "characteristics": [
+              "Garante que transações concorrentes não interfiram umas nas outras",
+              "Cada transação deve ser executada como se estivesse sozinha no sistema",
+              "Evita problemas como leitura de dados intermediários",
+              "É controlada por mecanismos como níveis de isolamento e locks",
+              "Permite execução segura de múltiplas transações simultaneamente"
+            ],
+            "examples": [
+              "Duas transações atualizando contas bancárias ao mesmo tempo",
+              "Uma transação não pode ler dados ainda não confirmados de outra",
+              "Uso de níveis de isolamento como READ COMMITTED ou SERIALIZABLE"
+            ]
+          }
+        },
+        {
+          "id": "transacao-acid-durabilidade",
+          "title": "Controle de Transações — ACID: Durabilidade",
+          "back": {
+            "keyQuestion": "O que significa a propriedade de Durabilidade nas transações de banco de dados?",
+            "characteristics": [
+              "Garante que dados confirmados por COMMIT não serão perdidos",
+              "As alterações persistem mesmo em caso de falha do sistema",
+              "O banco utiliza mecanismos de recuperação como logs de transação",
+              "Após o COMMIT, a transação torna-se permanente no banco",
+              "É essencial para confiabilidade em sistemas críticos"
+            ],
+            "examples": [
+              "Após uma transferência bancária confirmada com COMMIT, o saldo permanece atualizado",
+              "Se o servidor cair após o COMMIT, o banco recupera os dados ao reiniciar",
+              "Uso de logs de transação para reconstrução das operações confirmadas"
+            ]
+          }
+        },
+        {
+          "id": "transacao-acid-exemplo",
+          "title": "Controle de Transações — Exemplo Prático do ACID",
+          "back": {
+            "keyQuestion": "Como as propriedades ACID aparecem em um exemplo prático de transação?",
+            "characteristics": [
+              "As propriedades ACID garantem confiabilidade nas transações do banco",
+              "São aplicadas em operações críticas como transferências bancárias",
+              "Cada propriedade protege o banco contra um tipo específico de problema",
+              "Trabalham juntas para manter consistência e segurança dos dados"
+            ],
+            "examples": [
+              "Atomicidade: ou o valor é debitado de uma conta e creditado em outra, ou nada acontece",
+              "Consistência: o banco não pode permitir saldo negativo se a regra proibir",
+              "Isolamento: duas transferências simultâneas não podem interferir entre si",
+              "Durabilidade: após o COMMIT, os dados permanecem mesmo que o sistema falhe"
+            ]
+          }
+        },
+        {
+          "id": "transacao-dirty-read",
+          "title": "Controle de Transações — Dirty Read",
+          "back": {
+            "keyQuestion": "O que é Dirty Read (Leitura Suja) no controle de concorrência?",
+            "characteristics": [
+              "Ocorre quando uma transação lê dados que ainda não foram confirmados",
+              "Os dados podem ser revertidos caso a transação original execute ROLLBACK",
+              "Isso faz com que outra transação leia um valor que nunca existiu oficialmente",
+              "É um dos principais problemas de concorrência em bancos de dados",
+              "Pode ser evitado utilizando níveis de isolamento adequados"
+            ],
+            "examples": [
+              "Transação A atualiza o preço de um produto sem executar COMMIT",
+              "Transação B lê esse novo preço antes da confirmação",
+              "Se a transação A executar ROLLBACK, o valor lido por B nunca existiu oficialmente"
+            ]
+          }
+        },
+        {
+          "id": "transacao-non-repeatable-read",
+          "title": "Controle de Transações — Non-Repeatable Read",
+          "back": {
+            "keyQuestion": "O que é Non-Repeatable Read no controle de concorrência?",
+            "characteristics": [
+              "Ocorre quando uma transação lê um mesmo registro duas vezes e obtém valores diferentes",
+              "Isso acontece porque outra transação modifica e confirma o dado entre as leituras",
+              "Gera inconsistência dentro da mesma transação",
+              "É um problema típico de concorrência em bancos de dados",
+              "Pode ser evitado utilizando níveis de isolamento mais altos"
+            ],
+            "examples": [
+              "Uma transação consulta o saldo de uma conta",
+              "Outra transação atualiza esse saldo e faz COMMIT",
+              "A primeira transação consulta novamente e recebe um valor diferente"
+            ]
+          }
+        },
+        {
+          "id": "transacao-phantom-read",
+          "title": "Controle de Transações — Phantom Read",
+          "back": {
+            "keyQuestion": "O que é Phantom Read no controle de concorrência?",
+            "characteristics": [
+              "Ocorre quando uma consulta retorna linhas diferentes ao ser executada novamente",
+              "Isso acontece porque outra transação inseriu ou removeu registros",
+              "O conjunto de resultados da consulta muda dentro da mesma transação",
+              "É um problema típico em consultas que filtram conjuntos de dados",
+              "Pode ser evitado utilizando níveis de isolamento mais altos como SERIALIZABLE"
+            ],
+            "examples": [
+              "Consulta que retorna pedidos com valor maior que 1000",
+              "Outra transação insere um novo pedido com valor maior que 1000",
+              "Ao repetir a consulta, aparece uma linha adicional no resultado"
+            ]
+          }
+        },
+        {
+          "id": "transacao-niveis-isolamento",
+          "title": "Controle de Transações — Níveis de Isolamento",
+          "back": {
+            "keyQuestion": "Quais são os níveis de isolamento em bancos de dados e quais problemas de concorrência eles evitam?",
+            "characteristics": [
+              "Definem o grau de isolamento entre transações concorrentes",
+              "Controlam quais fenômenos de concorrência podem ocorrer",
+              "Quanto maior o isolamento, maior a segurança dos dados",
+              "Níveis mais altos podem reduzir a performance do sistema",
+              "São fundamentais para controle de concorrência em bancos relacionais"
+            ],
+            "examples": [
+              "Read Uncommitted: permite todos os problemas de concorrência",
+              "Read Committed: evita Dirty Read",
+              "Repeatable Read: evita Dirty Read e Non-Repeatable Read",
+              "Serializable: evita Dirty Read, Non-Repeatable Read e Phantom Read"
+            ]
+          }
+        },
+        {
+          "id": "transacao-locks",
+          "title": "Controle de Transações — Locks",
+          "back": {
+            "keyQuestion": "O que são locks em bancos de dados e quais são os principais tipos?",
+            "characteristics": [
+              "Locks são mecanismos de bloqueio usados para controlar acesso concorrente aos dados",
+              "Evitam conflitos quando múltiplas transações acessam o mesmo recurso",
+              "São fundamentais para garantir isolamento entre transações",
+              "Podem bloquear leitura ou escrita dependendo do tipo de lock"
+            ],
+            "examples": [
+              "Shared Lock (S): permite leitura do dado por várias transações",
+              "Shared Lock impede que outra transação modifique o dado",
+              "Exclusive Lock (X): permite leitura e escrita pela transação que possui o lock",
+              "Exclusive Lock bloqueia acesso de outras transações ao recurso"
+            ]
+          }
+        },
+        {
+          "id": "transacao-deadlock",
+          "title": "Controle de Transações — Deadlock",
+          "back": {
+            "keyQuestion": "O que é deadlock em bancos de dados?",
+            "characteristics": [
+              "Ocorre quando duas ou mais transações ficam esperando recursos bloqueados umas pelas outras",
+              "Cria um ciclo de espera entre transações",
+              "Nenhuma transação consegue continuar a execução",
+              "É um problema típico em sistemas com controle de concorrência baseado em locks",
+              "O banco detecta o deadlock e aborta uma das transações"
+            ],
+            "examples": [
+              "Transação A bloqueia tabela 1",
+              "Transação B bloqueia tabela 2",
+              "Transação A precisa da tabela 2",
+              "Transação B precisa da tabela 1"
+            ]
+          }
+        },
+        {
+          "id": "integridade-entidade",
+          "title": "Controle de Transações — Integridade de Entidade",
+          "back": {
+            "keyQuestion": "O que é integridade de entidade em um banco de dados?",
+            "characteristics": [
+              "Garante que cada registro de uma tabela seja identificado de forma única",
+              "A chave primária não pode ser nula",
+              "Evita registros duplicados ou sem identificação",
+              "É uma regra fundamental do modelo relacional"
+            ],
+            "examples": [
+              "Tabela CLIENTE com id_cliente como chave primária",
+              "id_cliente INT PRIMARY KEY",
+              "Cada registro possui um identificador único"
+            ]
+          }
+        },
+        {
+          "id": "integridade-referencial",
+          "title": "Controle de Transações — Integridade Referencial",
+          "back": {
+            "keyQuestion": "O que é integridade referencial em um banco de dados?",
+            "characteristics": [
+              "Garante consistência entre tabelas relacionadas",
+              "Uma chave estrangeira deve referenciar um valor existente na tabela pai",
+              "Impede criação de registros órfãos no banco",
+              "É implementada por meio da restrição FOREIGN KEY"
+            ],
+            "examples": [
+              "Tabela PEDIDO possui id_cliente como chave estrangeira",
+              "pedido.id_cliente REFERENCES cliente.id_cliente",
+              "Não pode existir pedido associado a um cliente inexistente"
+            ]
+          }
+        },
+        {
+          "id": "integridade-dominio",
+          "title": "Controle de Transações — Integridade de Domínio",
+          "back": {
+            "keyQuestion": "O que é integridade de domínio em um banco de dados?",
+            "characteristics": [
+              "Define quais valores são válidos para um atributo",
+              "Garante que os dados armazenados respeitem tipo e regras definidas",
+              "Evita inserção de valores inválidos ou fora do padrão",
+              "É implementada usando tipos de dados e restrições como CHECK"
+            ],
+            "examples": [
+              "idade INT CHECK (idade >= 18)",
+              "sexo CHAR(1)",
+              "salario DECIMAL com valor positivo",
+              "campo status limitado a valores específicos"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "arquitetura-de-sistemas",
+      "title": "Arquitetura de Sistemas",
+      "heraldic": "arquitetura-de-sistemas",
+      "cards": [
+        {
+          "id": "arquitetura-sistemas-conceito",
+          "title": "Arquitetura de Sistemas — Conceito",
+          "back": {
+            "keyQuestion": "O que é arquitetura de sistemas?",
+            "characteristics": [
+              "Define a organização estrutural de um sistema de software",
+              "Descreve os componentes que compõem o sistema",
+              "Define responsabilidades de cada componente",
+              "Define como os componentes se comunicam entre si",
+              "Estabelece padrões e decisões arquiteturais"
+            ],
+            "examples": [
+              "Divisão do sistema em camadas como front-end, backend e banco de dados",
+              "Uso de APIs para comunicação entre serviços",
+              "Definição de módulos e responsabilidades no sistema"
+            ]
+          }
+        },
+        {
+          "id": "arquitetura-monolitica",
+          "title": "Arquitetura de Sistemas — Monolítica",
+          "back": {
+            "keyQuestion": "O que é arquitetura monolítica em sistemas de software?",
+            "characteristics": [
+              "Todo o sistema é desenvolvido como uma única aplicação",
+              "Interface, lógica de negócio e acesso a dados ficam no mesmo sistema",
+              "O código é implantado como um único artefato",
+              "Mudanças em uma parte do sistema podem exigir recompilação completa"
+            ],
+            "examples": [
+              "Aplicação web onde front-end, backend e acesso ao banco estão no mesmo projeto",
+              "Sistema corporativo tradicional executado em um único servidor",
+              "Aplicação Java Spring Boot com UI, serviços e repositórios no mesmo deploy"
+            ]
+          }
+        },
+        {
+          "id": "arquitetura-camadas",
+          "title": "Arquitetura de Sistemas — Arquitetura em Camadas",
+          "back": {
+            "keyQuestion": "O que é arquitetura em camadas em sistemas de software?",
+            "characteristics": [
+              "Divide o sistema em camadas com responsabilidades específicas",
+              "Cada camada executa uma função específica do sistema",
+              "Camadas superiores dependem das camadas inferiores",
+              "Promove separação de responsabilidades e organização do código",
+              "É um dos modelos arquiteturais mais utilizados em sistemas corporativos"
+            ],
+            "examples": [
+              "Camada de apresentação responsável pela interface com o usuário",
+              "Camada de lógica de negócio responsável pelas regras do sistema",
+              "Camada de persistência responsável pelo acesso a dados",
+              "Banco de dados armazenando as informações do sistema"
+            ]
+          }
+        },
+        {
+          "id": "arquitetura-microservices",
+          "title": "Arquitetura de Sistemas — Microservices",
+          "back": {
+            "keyQuestion": "O que é arquitetura de microservices?",
+            "characteristics": [
+              "Divide o sistema em pequenos serviços independentes",
+              "Cada serviço possui uma responsabilidade específica",
+              "Serviços podem possuir banco de dados próprio",
+              "Comunicação entre serviços ocorre por meio de APIs",
+              "Permite escalabilidade e deploy independente"
+            ],
+            "examples": [
+              "Serviço de usuários",
+              "Serviço de pagamentos",
+              "Serviço de pedidos",
+              "Comunicação entre serviços usando APIs REST"
+            ]
+          }
+        },
+        {
+          "id": "arquitetura-layered",
+          "title": "Arquitetura de Sistemas — Layered Architecture",
+          "back": {
+            "keyQuestion": "O que caracteriza a arquitetura em camadas (Layered Architecture)?",
+            "characteristics": [
+              "Divide o sistema em níveis com responsabilidades específicas",
+              "Cada camada possui uma função bem definida no sistema",
+              "Camadas superiores utilizam serviços das camadas inferiores",
+              "Promove separação de responsabilidades e organização do código",
+              "É um dos padrões arquiteturais mais utilizados em sistemas corporativos"
+            ],
+            "examples": [
+              "Camada de apresentação responsável pela interface com o usuário",
+              "Camada de aplicação coordenando as operações do sistema",
+              "Camada de negócio contendo regras de negócio",
+              "Camada de persistência responsável pelo acesso ao banco de dados"
+            ]
+          }
+        },
+        {
+          "id": "arquitetura-camada-apresentacao",
+          "title": "Arquitetura de Sistemas — Camada de Apresentação",
+          "back": {
+            "keyQuestion": "Qual é a função da camada de apresentação na arquitetura em camadas?",
+            "characteristics": [
+              "Responsável pela interface entre o sistema e o usuário",
+              "Exibe telas e recebe entradas do usuário",
+              "Realiza validações simples de dados",
+              "Não contém regras complexas de negócio"
+            ],
+            "examples": [
+              "Interface web construída com Angular",
+              "Páginas HTML e estilos CSS",
+              "Formulários que enviam dados para o backend"
+            ]
+          }
+        },
+        {
+          "id": "arquitetura-camada-negocio",
+          "title": "Arquitetura de Sistemas — Camada de Negócio",
+          "back": {
+            "keyQuestion": "Qual é a função da camada de negócio na arquitetura em camadas?",
+            "characteristics": [
+              "Contém as regras de negócio do sistema",
+              "Implementa validações complexas e lógica do domínio",
+              "Define como as operações do sistema devem funcionar",
+              "Coordena processos e decisões importantes da aplicação"
+            ],
+            "examples": [
+              "Calcular impostos de um pedido",
+              "Validar regras para aprovação de um cadastro",
+              "Processar um pedido de compra",
+              "Aplicar regras de desconto em uma venda"
+            ]
+          }
+        },
+        {
+          "id": "arquitetura-camada-persistencia",
+          "title": "Arquitetura de Sistemas — Camada de Persistência",
+          "back": {
+            "keyQuestion": "Qual é a função da camada de persistência na arquitetura em camadas?",
+            "characteristics": [
+              "Responsável pelo acesso e manipulação de dados no banco",
+              "Executa consultas SQL e operações de leitura e escrita",
+              "Isola o acesso ao banco das outras camadas do sistema",
+              "Facilita manutenção e troca de tecnologias de banco de dados"
+            ],
+            "examples": [
+              "DAO (Data Access Object)",
+              "Repository",
+              "Uso de ORM para mapear objetos para tabelas do banco",
+              "Consultas SQL para buscar ou salvar dados"
+            ]
+          }
+        },
+        {
+          "id": "arquitetura-camadas-vantagens",
+          "title": "Arquitetura de Sistemas — Vantagens da Arquitetura em Camadas",
+          "back": {
+            "keyQuestion": "Quais são as principais vantagens da arquitetura em camadas?",
+            "characteristics": [
+              "Promove separação clara de responsabilidades entre partes do sistema",
+              "Facilita manutenção e evolução do software",
+              "Permite reutilização de componentes em diferentes partes do sistema",
+              "Facilita testes isolados de cada camada"
+            ],
+            "examples": [
+              "Interface pode ser alterada sem modificar regras de negócio",
+              "Camada de negócio pode ser reutilizada por diferentes interfaces",
+              "Testes podem validar regras de negócio sem depender do banco de dados",
+              "Mudança no banco pode ser isolada na camada de persistência"
+            ]
+          }
+        },
+        {
+          "id": "arquitetura-soa",
+          "title": "Arquitetura de Sistemas — SOA (Service Oriented Architecture)",
+          "back": {
+            "keyQuestion": "O que é SOA (Service Oriented Architecture)?",
+            "characteristics": [
+              "Divide o sistema em serviços independentes",
+              "Cada serviço executa uma função específica do sistema",
+              "Serviços expõem interfaces acessíveis pela rede",
+              "Promove baixo acoplamento entre partes do sistema",
+              "Permite reutilização de serviços por diferentes aplicações"
+            ],
+            "examples": [
+              "Serviço de clientes",
+              "Serviço de pedidos",
+              "Serviço de pagamento",
+              "Serviço de estoque"
+            ]
+          }
+        },
+        {
+          "id": "arquitetura-rest",
+          "title": "Arquitetura de Sistemas — REST",
+          "back": {
+            "keyQuestion": "O que é REST e quais são suas principais características?",
+            "characteristics": [
+              "REST significa Representational State Transfer",
+              "É um estilo arquitetural para construção de APIs web",
+              "Utiliza o protocolo HTTP para comunicação entre cliente e servidor",
+              "Em REST tudo é tratado como um recurso identificado por URI",
+              "As representações dos recursos normalmente são em JSON ou XML",
+              "O sistema deve ser stateless, sem estado entre requisições"
+            ],
+            "examples": [
+              "GET /clientes para consultar clientes",
+              "POST /clientes para criar um novo cliente",
+              "PUT /clientes/10 para atualizar cliente",
+              "DELETE /clientes/10 para remover cliente"
+            ]
+          }
+        },
+        {
+          "id": "rest-stateless",
+          "title": "Arquitetura de Sistemas — REST: Stateless",
+          "back": {
+            "keyQuestion": "O que significa Stateless em arquiteturas REST?",
+            "characteristics": [
+              "O servidor não armazena estado entre requisições",
+              "Cada requisição deve conter todas as informações necessárias para ser processada",
+              "O servidor não depende de sessões anteriores",
+              "Facilita escalabilidade e distribuição do sistema"
+            ],
+            "examples": [
+              "Requisições HTTP enviando token de autenticação em cada chamada",
+              "Uso de JWT para autenticação em APIs REST",
+              "Cliente envia credenciais ou token em todas as requisições"
+            ]
+          }
+        },
+        {
+          "id": "rest-formatos-dados",
+          "title": "Arquitetura de Sistemas — Formatos de Dados em APIs",
+          "back": {
+            "keyQuestion": "Quais formatos de dados são utilizados em APIs REST?",
+            "characteristics": [
+              "APIs REST utilizam representações de dados para comunicação",
+              "Os formatos mais comuns são JSON e XML",
+              "JSON é o formato mais utilizado em APIs modernas",
+              "Esses formatos permitem troca estruturada de informações entre sistemas"
+            ],
+            "examples": [
+              "JSON retornando dados de clientes em uma API",
+              "XML utilizado em integrações entre sistemas corporativos",
+              "Resposta HTTP com dados estruturados para consumo por aplicações"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "seguranca-da-informacao",
+      "title": "Segurança da Informação",
+      "heraldic": "seguranca-da-informacao",
+      "cards": [
+        {
+          "id": "seguranca-triade-cia",
+          "title": "Segurança da Informação — Tríade CIA",
+          "back": {
+            "keyQuestion": "O que é a tríade CIA na segurança da informação?",
+            "characteristics": [
+              "É o modelo fundamental da segurança da informação",
+              "Define três princípios essenciais: confidencialidade, integridade e disponibilidade",
+              "Esses princípios orientam a proteção de sistemas e dados",
+              "Todo controle de segurança busca garantir um ou mais desses princípios"
+            ],
+            "examples": [
+              "Confidencialidade: senha protegendo acesso a um sistema",
+              "Integridade: uso de hash para verificar se dados foram alterados",
+              "Disponibilidade: servidores redundantes garantindo acesso contínuo"
+            ]
+          }
+        },
+        {
+          "id": "seguranca-menor-privilegio",
+          "title": "Segurança da Informação — Princípio do Menor Privilégio",
+          "back": {
+            "keyQuestion": "O que é o princípio do menor privilégio na segurança da informação?",
+            "characteristics": [
+              "Determina que cada usuário deve possuir apenas as permissões necessárias para executar sua função",
+              "Reduz riscos de acesso indevido ou uso inadequado de sistemas",
+              "Limita o impacto de erros ou ataques",
+              "É um dos princípios fundamentais de controle de acesso"
+            ],
+            "examples": [
+              "Estagiário com acesso apenas de leitura",
+              "Desenvolvedor com acesso de leitura e escrita",
+              "DBA com permissões administrativas no banco de dados",
+              "Evitar conceder privilégios de administrador para todos os usuários"
+            ]
+          }
+        },
+        {
+          "id": "seguranca-autenticacao-autorizacao",
+          "title": "Segurança da Informação — Autenticação vs Autorização",
+          "back": {
+            "keyQuestion": "Qual a diferença entre autenticação e autorização em sistemas de segurança?",
+            "characteristics": [
+              "Autenticação verifica a identidade do usuário",
+              "Autorização define quais ações o usuário pode executar",
+              "Autenticação ocorre antes da autorização",
+              "Ambos são mecanismos fundamentais de controle de acesso"
+            ],
+            "examples": [
+              "Usuário digita login e senha para entrar no sistema",
+              "Sistema verifica se o usuário pode excluir registros",
+              "Usuário autenticado pode ter diferentes permissões dentro do sistema"
+            ]
+          }
+        },
+        {
+          "id": "seguranca-owasp-vulnerabilidades",
+          "title": "Segurança da Informação — Vulnerabilidades Web (OWASP)",
+          "back": {
+            "keyQuestion": "Quais são algumas das principais vulnerabilidades web listadas pela OWASP?",
+            "characteristics": [
+              "A OWASP publica um ranking das falhas de segurança mais comuns em aplicações web",
+              "Essas vulnerabilidades exploram erros de desenvolvimento ou configuração",
+              "Podem permitir acesso não autorizado ou execução de código malicioso",
+              "São amplamente usadas como referência em auditorias de segurança"
+            ],
+            "examples": [
+              "SQL Injection permitindo execução de comandos SQL maliciosos",
+              "XSS permitindo injeção de scripts em páginas web",
+              "Broken Authentication permitindo falhas no processo de login",
+              "Security Misconfiguration devido a configurações inseguras do sistema"
+            ]
+          }
+        },
+        {
+          "id": "seguranca-lgpd",
+          "title": "Segurança da Informação — LGPD",
+          "back": {
+            "keyQuestion": "O que é a LGPD e qual seu objetivo?",
+            "characteristics": [
+              "LGPD significa Lei Geral de Proteção de Dados",
+              "Regula o tratamento de dados pessoais no Brasil",
+              "Define regras para coleta, uso e armazenamento de dados",
+              "Tem como objetivo proteger a privacidade dos cidadãos"
+            ],
+            "examples": [
+              "Dados pessoais como nome, CPF, email e telefone",
+              "Endereço e número de IP também são considerados dados pessoais",
+              "Empresas devem informar como utilizam os dados coletados"
+            ]
+          }
+        },
+        {
+          "id": "seguranca-criptografia",
+          "title": "Segurança da Informação — Criptografia",
+          "back": {
+            "keyQuestion": "O que é criptografia e quais são seus principais tipos?",
+            "characteristics": [
+              "Criptografia transforma informação legível em forma ilegível",
+              "Protege dados contra acesso não autorizado",
+              "Pode utilizar criptografia simétrica ou assimétrica",
+              "É amplamente usada em comunicação segura na internet"
+            ],
+            "examples": [
+              "Criptografia simétrica usando algoritmo AES",
+              "Criptografia assimétrica usando algoritmo RSA",
+              "Uso de criptografia em conexões HTTPS"
+            ]
+          }
+        },
+        {
+          "id": "seguranca-hash",
+          "title": "Segurança da Informação — Hash",
+          "back": {
+            "keyQuestion": "O que é uma função hash na segurança da informação?",
+            "characteristics": [
+              "Hash gera uma representação única (impressão digital) de um dado",
+              "Não é reversível, ou seja, não permite recuperar o dado original",
+              "É usado para verificar integridade de dados",
+              "É amplamente utilizado para armazenamento seguro de senhas"
+            ],
+            "examples": [
+              "Senha armazenada como hash em banco de dados",
+              "Verificação de integridade de arquivos",
+              "Algoritmos comuns como SHA-256 ou MD5"
+            ]
+          }
+        },
+        {
+          "id": "seguranca-phishing",
+          "title": "Segurança da Informação — Phishing",
+          "back": {
+            "keyQuestion": "O que é um ataque de phishing?",
+            "characteristics": [
+              "Phishing é um tipo de ataque de engenharia social",
+              "O atacante tenta enganar o usuário para obter informações sensíveis",
+              "Normalmente utiliza e-mails, mensagens ou sites falsos",
+              "Busca capturar dados como senhas, números de cartão ou dados pessoais"
+            ],
+            "examples": [
+              "Email falso de banco pedindo atualização de senha",
+              "Página falsa imitando site de login",
+              "Mensagem com link malicioso solicitando dados pessoais"
+            ]
+          }
+        },
+        {
+          "id": "seguranca-ddos",
+          "title": "Segurança da Informação — DDoS",
+          "back": {
+            "keyQuestion": "O que é um ataque DDoS?",
+            "characteristics": [
+              "DDoS significa Distributed Denial of Service",
+              "Consiste em sobrecarregar um servidor ou sistema com grande volume de requisições",
+              "Utiliza múltiplas máquinas para gerar tráfego malicioso",
+              "Tem como objetivo tornar o serviço indisponível"
+            ],
+            "examples": [
+              "Milhares de computadores enviando requisições simultâneas para um servidor",
+              "Botnets utilizadas para gerar tráfego massivo",
+              "Ataque que derruba sites ou serviços online"
+            ]
+          }
+        },
+        {
+          "id": "seguranca-man-in-the-middle",
+          "title": "Segurança da Informação — Man in the Middle",
+          "back": {
+            "keyQuestion": "O que é um ataque Man in the Middle?",
+            "characteristics": [
+              "O atacante intercepta a comunicação entre duas partes",
+              "As vítimas acreditam estar se comunicando diretamente entre si",
+              "O invasor pode capturar ou modificar os dados transmitidos",
+              "Explora falhas de criptografia ou redes inseguras"
+            ],
+            "examples": [
+              "Interceptação de dados em redes Wi-Fi públicas",
+              "Captura de credenciais de login durante comunicação não criptografada",
+              "Alteração de mensagens trocadas entre cliente e servidor"
+            ]
+          }
+        },
+        {
+          "id": "seguranca-bruteforce",
+          "title": "Segurança da Informação — Brute Force",
+          "back": {
+            "keyQuestion": "O que é um ataque de força bruta (Brute Force)?",
+            "characteristics": [
+              "Ataque que tenta descobrir credenciais testando várias combinações possíveis",
+              "Utiliza tentativa e erro para encontrar senha ou chave",
+              "Pode ser automatizado por ferramentas ou scripts",
+              "Explora principalmente senhas fracas ou curtas"
+            ],
+            "examples": [
+              "Ferramenta tentando milhares de senhas em um login",
+              "Ataque tentando todas as combinações possíveis de senha",
+              "Script automatizado tentando acessar contas repetidamente"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lingua-portuguesa",
+      "title": "Língua Portuguesa",
+      "heraldic": "lingua-portuguesa",
+      "cards": [
+        {
+          "id": "portugues-interpretacao-texto",
+          "title": "Língua Portuguesa — Interpretação de Texto",
+          "back": {
+            "keyQuestion": "O que é interpretação de texto?",
+            "characteristics": [
+              "Consiste em compreender o sentido de um texto",
+              "Analisa ideias explícitas e implícitas",
+              "Exige identificar tema, intenção e argumentos do autor",
+              "Pode envolver análise de contexto e inferência"
+            ],
+            "examples": [
+              "Identificar a ideia principal de um texto",
+              "Compreender a intenção do autor",
+              "Inferir informações que não estão explícitas",
+              "Relacionar informações presentes no texto"
+            ]
+          }
+        },
+        {
+          "id": "portugues-concordancia",
+          "title": "Língua Portuguesa — Concordância",
+          "back": {
+            "keyQuestion": "O que é concordância na língua portuguesa?",
+            "characteristics": [
+              "Concordância é a relação de harmonia entre palavras em uma frase",
+              "Pode ocorrer entre sujeito e verbo ou entre substantivo e seus modificadores",
+              "Divide-se em concordância verbal e concordância nominal",
+              "Garante coerência gramatical na estrutura da frase"
+            ],
+            "examples": [
+              "Concordância verbal: Os alunos estudam para a prova",
+              "Concordância verbal: O estudante chegou cedo",
+              "Concordância nominal: As casas bonitas",
+              "Concordância nominal: Os livros interessantes"
+            ]
+          }
+        },
+        {
+          "id": "portugues-regencia",
+          "title": "Língua Portuguesa — Regência",
+          "back": {
+            "keyQuestion": "O que é regência na língua portuguesa?",
+            "characteristics": [
+              "Regência estuda a relação entre uma palavra e seus complementos",
+              "Determina se há ou não uso de preposição",
+              "Pode ser regência verbal ou regência nominal",
+              "Indica como verbos e nomes se conectam aos termos da oração"
+            ],
+            "examples": [
+              "Gostar de música",
+              "Assistir ao filme",
+              "Necessidade de ajuda",
+              "Orgulho de sua conquista"
+            ]
+          }
+        },
+        {
+          "id": "portugues-pontuacao",
+          "title": "Língua Portuguesa — Pontuação",
+          "back": {
+            "keyQuestion": "Qual é a função da pontuação na língua portuguesa?",
+            "characteristics": [
+              "Pontuação organiza a estrutura da frase",
+              "Indica pausas e entonação no texto",
+              "Ajuda a separar ideias e termos da oração",
+              "Evita ambiguidades e melhora a compreensão do texto"
+            ],
+            "examples": [
+              "Uso de vírgula para separar elementos de uma enumeração",
+              "Uso de ponto final para encerrar uma frase",
+              "Uso de dois pontos para introduzir explicação ou lista",
+              "Uso de ponto de interrogação para indicar pergunta"
+            ]
+          }
+        },
+        {
+          "id": "portugues-crase",
+          "title": "Língua Portuguesa — Crase",
+          "back": {
+            "keyQuestion": "O que é crase na língua portuguesa?",
+            "characteristics": [
+              "Crase é a fusão da preposição 'a' com o artigo feminino 'a'",
+              "É indicada pelo acento grave (`à`)",
+              "Ocorre antes de palavras femininas que exigem preposição 'a'",
+              "Depende da regência do verbo ou do nome"
+            ],
+            "examples": [
+              "Vou à escola",
+              "Entreguei o documento à professora",
+              "Cheguei à cidade ontem",
+              "Assistimos à apresentação"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "raciocinio-logico",
+      "title": "Raciocínio Lógico",
+      "heraldic": "raciocinio-logico",
+      "cards": [
+        {
+          "id": "raciocinio-equacoes",
+          "title": "Raciocínio Lógico — Equações",
+          "back": {
+            "keyQuestion": "O que é uma equação?",
+            "characteristics": [
+              "Equação é uma igualdade matemática que contém uma incógnita",
+              "A incógnita representa um valor desconhecido",
+              "Resolver uma equação significa encontrar o valor da incógnita",
+              "Os dois lados da igualdade devem permanecer equivalentes"
+            ],
+            "examples": ["x + 5 = 12", "2x = 10", "x - 3 = 7", "3x + 2 = 11"]
+          }
+        },
+        {
+          "id": "raciocinio-macete-equacoes",
+          "title": "Raciocínio Lógico — Macete para Montar Equações",
+          "back": {
+            "keyQuestion": "Como traduzir expressões de problemas para equações?",
+            "characteristics": [
+              "Problemas matemáticos usam linguagem natural que precisa ser traduzida para linguagem algébrica",
+              "Palavras comuns indicam operações matemáticas",
+              "Identificar essas palavras facilita montar a equação correta",
+              "Esse processo é essencial para resolver problemas de raciocínio lógico"
+            ],
+            "examples": [
+              "O dobro de um número → 2x",
+              "O triplo de um número → 3x",
+              "A metade de um número → x/2",
+              "Sucessor de um número → x + 1",
+              "Antecessor de um número → x - 1"
+            ]
+          }
+        },
+        {
+          "id": "raciocinio-proporcao-regra-tres",
+          "title": "Raciocínio Lógico — Proporção e Regra de Três",
+          "back": {
+            "keyQuestion": "O que é proporção e como funciona a regra de três?",
+            "characteristics": [
+              "Proporção é a igualdade entre duas razões",
+              "Regra de três é usada para encontrar um valor desconhecido em uma proporção",
+              "Pode ser direta ou inversamente proporcional",
+              "A resolução normalmente utiliza multiplicação cruzada"
+            ],
+            "examples": [
+              "a/b = c/x",
+              "3 analistas fazem um sistema em 10 dias",
+              "6 analistas fariam o mesmo sistema em menos tempo",
+              "Multiplicação cruzada para encontrar o valor desconhecido"
+            ]
+          }
+        },
+        {
+          "id": "raciocinio-macete-regra-tres",
+          "title": "Raciocínio Lógico — Macete da Regra de Três",
+          "back": {
+            "keyQuestion": "Como identificar se a regra de três é direta ou inversa?",
+            "characteristics": [
+              "Observe apenas o comportamento das variáveis",
+              "Se as duas aumentam juntas, a relação é direta",
+              "Se uma aumenta e a outra diminui, a relação é inversa",
+              "Esse macete ajuda a evitar confusão em problemas de prova"
+            ],
+            "examples": [
+              "Mais produção → mais lucro (direta)",
+              "Mais pessoas trabalhando → menos tempo para concluir tarefa (inversa)",
+              "Mais horas trabalhadas → mais salário (direta)",
+              "Mais velocidade → menos tempo de viagem (inversa)"
+            ]
+          }
+        },
+        {
+          "id": "raciocinio-porcentagem",
+          "title": "Raciocínio Lógico — Porcentagem",
+          "back": {
+            "keyQuestion": "Como calcular porcentagem?",
+            "characteristics": [
+              "Porcentagem representa uma fração de 100",
+              "É usada para calcular partes de um valor total",
+              "A fórmula básica multiplica o valor pela fração percentual",
+              "Muito usada em problemas de desconto, aumento e juros"
+            ],
+            "examples": [
+              "20% de 500 = 500 × 20/100 = 100",
+              "10% de 200 = 200 × 10/100 = 20",
+              "50% de 80 = 80 × 50/100 = 40",
+              "5% de 300 = 300 × 5/100 = 15"
+            ]
+          }
+        },
+        {
+          "id": "raciocinio-macete-porcentagem",
+          "title": "Raciocínio Lógico — Macetes de Porcentagem",
+          "back": {
+            "keyQuestion": "Quais são os principais macetes para calcular porcentagem rapidamente?",
+            "characteristics": [
+              "Algumas porcentagens podem ser calculadas mentalmente usando divisões simples",
+              "Transformar porcentagens em frações facilita o cálculo",
+              "Esses atalhos reduzem tempo de resolução em provas",
+              "Muito úteis em questões de concurso e raciocínio lógico"
+            ],
+            "examples": [
+              "10% → dividir o valor por 10",
+              "5% → metade de 10%",
+              "1% → dividir por 100",
+              "25% → um quarto do valor",
+              "50% → metade do valor",
+              "75% → três quartos do valor"
+            ]
+          }
+        },
+        {
+          "id": "raciocinio-probabilidade",
+          "title": "Raciocínio Lógico — Probabilidade",
+          "back": {
+            "keyQuestion": "Como calcular probabilidade simples?",
+            "characteristics": [
+              "Probabilidade mede a chance de um evento acontecer",
+              "É calculada dividindo casos favoráveis pelos casos possíveis",
+              "O resultado pode ser apresentado como fração, decimal ou porcentagem",
+              "Eventos complementares somam probabilidade total igual a 1"
+            ],
+            "examples": [
+              "Probabilidade de sair número par em um dado",
+              "3 resultados favoráveis em 6 possíveis → 3/6 = 1/2",
+              "Evento complementar: probabilidade de não ocorrer",
+              "Se chance de chover é 30%, de não chover é 70%"
+            ]
+          }
+        },
+        {
+          "id": "raciocinio-macete-probabilidade",
+          "title": "Raciocínio Lógico — Macete de Probabilidade",
+          "back": {
+            "keyQuestion": "Quando usar o complemento em problemas de probabilidade?",
+            "characteristics": [
+              "Quando a questão usa expressões como 'pelo menos' ou 'ao menos'",
+              "É mais fácil calcular o evento complementar",
+              "Depois subtrair o resultado de 1",
+              "Esse macete simplifica cálculos em problemas de probabilidade"
+            ],
+            "examples": [
+              "Pelo menos um evento ocorrer",
+              "Ao menos uma tentativa dar certo",
+              "Calcular primeiro a probabilidade de nenhum evento ocorrer",
+              "Aplicar P(A') = 1 − P(A)"
+            ]
+          }
+        },
+        {
+          "id": "raciocinio-porcentagem-cascata",
+          "title": "Raciocínio Lógico — Porcentagem em Cascata",
+          "back": {
+            "keyQuestion": "O que é porcentagem em cascata?",
+            "characteristics": [
+              "Ocorre quando vários aumentos ou descontos percentuais são aplicados em sequência",
+              "Cada porcentagem é calculada sobre o valor resultante da etapa anterior",
+              "Os percentuais não devem ser somados diretamente",
+              "Muito comum em problemas de aumentos ou descontos sucessivos"
+            ],
+            "examples": [
+              "Salário de 2000 com aumento de 10% seguido de 20%",
+              "Preço com desconto de 15% e depois mais 10%",
+              "Aplicação de juros sucessivos sobre um valor"
+            ]
+          }
+        },
+        {
+          "id": "raciocinio-macete-porcentagem-cascata",
+          "title": "Raciocínio Lógico — Macete Porcentagem em Cascata",
+          "back": {
+            "keyQuestion": "Como calcular rapidamente porcentagem em cascata?",
+            "characteristics": [
+              "Transforme a porcentagem em fator multiplicador",
+              "Multiplique diretamente pelo fator correspondente",
+              "Aumentos usam fator maior que 1",
+              "Descontos usam fator menor que 1"
+            ],
+            "examples": [
+              "+10% → ×1,1",
+              "+20% → ×1,2",
+              "-10% → ×0,9",
+              "-20% → ×0,8"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
