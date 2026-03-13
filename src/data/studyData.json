@@ -90,6 +90,665 @@
               "A interface é intuitiva?"
             ]
           }
+        },
+        {
+          "id": "teste-regressao",
+          "title": "Teste de Regressão",
+          "back": {
+            "keyQuestion": "O sistema continua funcionando após mudanças?",
+            "characteristics": [
+              "Executado após alterações no sistema",
+              "Verifica se funcionalidades existentes continuam funcionando",
+              "Evita efeitos colaterais após correções ou melhorias",
+              "Pode ser aplicado após correção de bugs",
+              "Pode ocorrer após novas funcionalidades ou versões"
+            ],
+            "examples": [
+              "Garante que mudanças não quebrem funcionalidades existentes"
+            ]
+          }
+        },
+        {
+          "id": "teste-unitario",
+          "title": "Teste Unitário",
+          "back": {
+            "keyQuestion": "A menor parte do sistema funciona corretamente?",
+            "characteristics": [
+              "Testa a menor unidade do sistema (função, método ou classe)",
+              "Executado de forma isolada",
+              "Verifica lógica e comportamento da unidade",
+              "Normalmente implementado pelo desenvolvedor"
+            ],
+            "examples": [
+              "Testar se um método de cálculo retorna o valor correto"
+            ]
+          }
+        },
+        {
+          "id": "teste-integracao",
+          "title": "Teste de Integração",
+          "back": {
+            "keyQuestion": "Os módulos do sistema funcionam corretamente juntos?",
+            "characteristics": [
+              "Testa a integração entre módulos",
+              "Verifica comunicação entre componentes",
+              "Confirma troca correta de dados",
+              "Executado após testes unitários"
+            ],
+            "examples": [
+              "Sistema envia dados corretamente para o banco?",
+              "API retorna dados corretamente para o front-end?"
+            ]
+          }
+        },
+        {
+          "id": "teste-caixa-branca",
+          "title": "Teste Caixa Branca",
+          "back": {
+            "keyQuestion": "O código interno do sistema funciona corretamente?",
+            "characteristics": [
+              "Baseado na estrutura interna do código",
+              "Requer conhecimento do código-fonte",
+              "Analisa fluxo do programa",
+              "Avalia condições, laços e caminhos lógicos",
+              "Foco em cobertura de código"
+            ],
+            "examples": [
+              "Teste de caminhos lógicos do código",
+              "Teste de condições e ramificações",
+              "Análise de cobertura de código"
+            ]
+          }
+        },
+        {
+          "id": "teste-caixa-preta",
+          "title": "Teste Caixa Preta",
+          "back": {
+            "keyQuestion": "O sistema produz a saída correta para uma entrada?",
+            "characteristics": [
+              "Baseado apenas nas entradas e saídas do sistema",
+              "Não considera a estrutura interna do código",
+              "Não requer conhecimento do código-fonte",
+              "Foco no comportamento funcional"
+            ],
+            "examples": [
+              "Inserir dados e verificar o resultado retornado",
+              "Testar funcionalidades a partir da interface do sistema"
+            ]
+          }
+        },
+        {
+          "id": "modelo-v",
+          "title": "Modelo em V",
+          "back": {
+            "keyQuestion": "Como o Modelo em V relaciona desenvolvimento e testes?",
+            "characteristics": [
+              "Evolução do modelo em cascata",
+              "Cada fase de desenvolvimento possui um teste correspondente",
+              "Desenvolvimento ocorre no lado esquerdo do V",
+              "Testes ocorrem no lado direito do V",
+              "Forte relação entre verificação e validação"
+            ],
+            "examples": [
+              "Planejamento de testes começa desde o início do projeto",
+              "Modelo comum em sistemas críticos ou regulados"
+            ]
+          }
+        },
+        {
+          "id": "modelo-v-desenvolvimento",
+          "title": "Modelo em V — Desenvolvimento",
+          "back": {
+            "keyQuestion": "Quais são as etapas de desenvolvimento no lado esquerdo do Modelo em V?",
+            "characteristics": [
+              "Levantamento de requisitos",
+              "Especificação de requisitos",
+              "Projeto (design) do sistema",
+              "Projeto detalhado",
+              "Implementação (codificação)"
+            ],
+            "examples": [
+              "Representa o lado descendente do V",
+              "Cada etapa terá um teste correspondente no lado direito"
+            ]
+          }
+        },
+        {
+          "id": "modelo-v-testes",
+          "title": "Modelo em V — Testes",
+          "back": {
+            "keyQuestion": "Quais testes correspondem às fases de desenvolvimento no Modelo em V?",
+            "characteristics": [
+              "Teste unitário valida a implementação",
+              "Teste de integração valida o projeto detalhado",
+              "Teste de sistema valida o design do sistema",
+              "Teste de aceitação valida os requisitos"
+            ],
+            "examples": [
+              "Representa o lado ascendente do V",
+              "Cada teste corresponde a uma fase anterior de desenvolvimento"
+            ]
+          }
+        },
+        {
+          "id": "piramide-testes-base",
+          "title": "Pirâmide de Testes — Base",
+          "back": {
+            "keyQuestion": "Qual nível de teste forma a base da pirâmide de testes?",
+            "characteristics": [
+              "Testes unitários",
+              "Maior quantidade de testes",
+              "Executam partes isoladas do código",
+              "Rápidos e baratos de executar",
+              "Executados com frequência"
+            ],
+            "examples": [
+              "Testar funções ou métodos isolados",
+              "Verificar cálculos ou regras de negócio específicas"
+            ]
+          }
+        },
+        {
+          "id": "piramide-testes-integracao",
+          "title": "Pirâmide de Testes — Integração",
+          "back": {
+            "keyQuestion": "Qual nível ocupa o meio da pirâmide de testes?",
+            "characteristics": [
+              "Testes de integração",
+              "Quantidade moderada de testes",
+              "Verificam comunicação entre módulos",
+              "Mais lentos que testes unitários",
+              "Validam troca de dados entre componentes"
+            ],
+            "examples": [
+              "API comunica corretamente com o banco?",
+              "Serviço retorna dados corretamente para outro módulo?"
+            ]
+          }
+        },
+        {
+          "id": "piramide-testes-topo",
+          "title": "Pirâmide de Testes — Topo",
+          "back": {
+            "keyQuestion": "Quais testes ficam no topo da pirâmide?",
+            "characteristics": [
+              "Testes de sistema, interface ou aceitação",
+              "Menor quantidade de testes",
+              "Mais caros e lentos de executar",
+              "Testam o sistema completo",
+              "Dependem mais de ambiente e infraestrutura"
+            ],
+            "examples": [
+              "Testes end-to-end da aplicação",
+              "Testes de aceitação realizados pelo usuário"
+            ]
+          }
+        },
+        {
+          "id": "garantia-qualidade",
+          "title": "Garantia da Qualidade (QA)",
+          "back": {
+            "keyQuestion": "O processo está adequado para gerar qualidade?",
+            "characteristics": [
+              "Foco no processo de desenvolvimento",
+              "Atua antes e durante o desenvolvimento",
+              "Abordagem preventiva",
+              "Define padrões e práticas de qualidade",
+              "Promove melhoria contínua"
+            ],
+            "examples": [
+              "Definição de metodologia de desenvolvimento",
+              "Padronização de código",
+              "Auditorias de processo",
+              "Treinamentos de equipe",
+              "Revisões de processo"
+            ]
+          }
+        },
+        {
+          "id": "controle-qualidade",
+          "title": "Controle da Qualidade (QC)",
+          "back": {
+            "keyQuestion": "O produto está conforme o esperado?",
+            "characteristics": [
+              "Foco no produto final",
+              "Atividade detectiva (identifica defeitos)",
+              "Baseado na execução do sistema",
+              "Envolve atividades de teste",
+              "Verifica se o software atende aos requisitos"
+            ],
+            "examples": [
+              "Teste unitário",
+              "Teste de sistema",
+              "Teste de aceitação",
+              "Execução de casos de teste"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "metodologias-ageis",
+      "title": "Metodologias Ágeis",
+      "heraldic": "metodologias-ageis",
+      "cards": [
+        {
+          "id": "scrum",
+          "title": "Scrum",
+          "back": {
+            "keyQuestion": "O que é Scrum?",
+            "characteristics": [
+              "Framework ágil para desenvolvimento de software",
+              "Baseado em ciclos curtos chamados Sprints",
+              "Foco em entregas incrementais e frequentes",
+              "Trabalho colaborativo entre equipe e stakeholders",
+              "Promove adaptação e melhoria contínua"
+            ],
+            "examples": [
+              "Projeto dividido em Sprints de 2 a 4 semanas",
+              "Entrega de funcionalidades ao final de cada Sprint"
+            ]
+          }
+        },
+        {
+          "id": "scrum-product-owner",
+          "title": "Scrum — Product Owner",
+          "back": {
+            "keyQuestion": "Quem é responsável pelo valor do produto no Scrum?",
+            "characteristics": [
+              "Responsável por maximizar o valor do produto",
+              "Gerencia e prioriza o Product Backlog",
+              "Define o que deve ser desenvolvido",
+              "Representa os interesses do cliente e stakeholders",
+              "Toma decisões sobre funcionalidades do produto"
+            ],
+            "examples": [
+              "Priorizar histórias de usuário no Product Backlog",
+              "Definir quais funcionalidades entram na próxima Sprint"
+            ]
+          }
+        },
+        {
+          "id": "scrum-scrum-master",
+          "title": "Scrum — Scrum Master",
+          "back": {
+            "keyQuestion": "Quem garante que o Scrum está sendo seguido corretamente?",
+            "characteristics": [
+              "Responsável por facilitar o uso do Scrum",
+              "Garante que o framework Scrum seja compreendido e aplicado",
+              "Remove impedimentos que atrapalham o time",
+              "Ajuda o time a melhorar continuamente",
+              "Atua como facilitador entre equipe e organização"
+            ],
+            "examples": [
+              "Remover bloqueios que impedem o trabalho do time",
+              "Facilitar reuniões como Daily Scrum ou Retrospective"
+            ]
+          }
+        },
+        {
+          "id": "scrum-time-desenvolvimento",
+          "title": "Scrum — Time de Desenvolvimento",
+          "back": {
+            "keyQuestion": "Quem é responsável por construir o produto no Scrum?",
+            "characteristics": [
+              "Equipe responsável por desenvolver o produto",
+              "Multidisciplinar (possui todas as habilidades necessárias)",
+              "Auto-organizada",
+              "Trabalha para entregar incrementos do produto",
+              "Responsável pela implementação dos itens da Sprint"
+            ],
+            "examples": [
+              "Desenvolvedores, testadores e designers trabalhando juntos",
+              "Implementação de histórias de usuário durante a Sprint"
+            ]
+          }
+        },
+        {
+          "id": "scrum-sprint",
+          "title": "Scrum — Sprint",
+          "back": {
+            "keyQuestion": "O que é uma Sprint no Scrum?",
+            "characteristics": [
+              "Ciclo de desenvolvimento com tempo fixo",
+              "Duração geralmente de 1 a 4 semanas",
+              "Durante a Sprint o trabalho planejado é realizado",
+              "Cada Sprint gera um incremento do produto",
+              "Todas as atividades do Scrum ocorrem dentro da Sprint"
+            ],
+            "examples": [
+              "Sprint de duas semanas para desenvolver novas funcionalidades",
+              "Entrega de incremento do produto ao final da Sprint"
+            ]
+          }
+        },
+        {
+          "id": "scrum-sprint-planning",
+          "title": "Scrum — Sprint Planning",
+          "back": {
+            "keyQuestion": "Como a equipe define o trabalho da Sprint?",
+            "characteristics": [
+              "Evento que inicia a Sprint",
+              "Define o objetivo da Sprint (Sprint Goal)",
+              "Seleciona itens do Product Backlog",
+              "Planeja como o trabalho será realizado",
+              "Envolve todo o time Scrum"
+            ],
+            "examples": [
+              "Escolher histórias de usuário que serão desenvolvidas na Sprint",
+              "Definir tarefas necessárias para entregar o incremento"
+            ]
+          }
+        },
+        {
+          "id": "scrum-daily",
+          "title": "Scrum — Daily Scrum",
+          "back": {
+            "keyQuestion": "Como o time acompanha diariamente o progresso da Sprint?",
+            "characteristics": [
+              "Reunião diária da equipe de desenvolvimento",
+              "Duração máxima de 15 minutos",
+              "Serve para inspecionar o progresso da Sprint",
+              "Ajuda a sincronizar o trabalho do time",
+              "Permite ajustar o plano de trabalho"
+            ],
+            "examples": [
+              "Cada membro relata o progresso do trabalho",
+              "Equipe identifica impedimentos que precisam ser resolvidos"
+            ]
+          }
+        },
+        {
+          "id": "scrum-sprint-review",
+          "title": "Scrum — Sprint Review",
+          "back": {
+            "keyQuestion": "Como o incremento do produto é avaliado ao final da Sprint?",
+            "characteristics": [
+              "Evento realizado ao final da Sprint",
+              "Apresenta o incremento do produto desenvolvido",
+              "Permite coletar feedback dos stakeholders",
+              "Avalia o que foi concluído durante a Sprint",
+              "Pode ajustar o Product Backlog com base no feedback"
+            ],
+            "examples": [
+              "Demonstração de funcionalidades implementadas",
+              "Discussão com stakeholders sobre próximos passos"
+            ]
+          }
+        },
+        {
+          "id": "scrum-sprint-retrospective",
+          "title": "Scrum — Sprint Retrospective",
+          "back": {
+            "keyQuestion": "Como o time melhora seu processo de trabalho no Scrum?",
+            "characteristics": [
+              "Evento realizado ao final da Sprint",
+              "Analisa como foi o processo de trabalho da equipe",
+              "Identifica pontos de melhoria",
+              "Promove melhoria contínua",
+              "Define ações para a próxima Sprint"
+            ],
+            "examples": [
+              "Equipe discute o que funcionou bem e o que pode melhorar",
+              "Definição de ações para tornar a próxima Sprint mais eficiente"
+            ]
+          }
+        },
+        {
+          "id": "scrum-product-backlog",
+          "title": "Scrum — Product Backlog",
+          "back": {
+            "keyQuestion": "Onde ficam listados todos os itens que podem ser desenvolvidos no produto?",
+            "characteristics": [
+              "Lista priorizada de tudo que pode ser desenvolvido no produto",
+              "Gerenciado pelo Product Owner",
+              "Contém funcionalidades, melhorias e correções",
+              "Evolui continuamente durante o projeto",
+              "Serve como fonte de trabalho para as Sprints"
+            ],
+            "examples": [
+              "Histórias de usuário priorizadas pelo Product Owner",
+              "Lista de funcionalidades planejadas para o produto"
+            ]
+          }
+        },
+        {
+          "id": "scrum-sprint-backlog",
+          "title": "Scrum — Sprint Backlog",
+          "back": {
+            "keyQuestion": "Onde ficam definidos os itens que serão trabalhados na Sprint atual?",
+            "characteristics": [
+              "Conjunto de itens selecionados do Product Backlog",
+              "Define o trabalho da Sprint atual",
+              "Criado durante o Sprint Planning",
+              "Gerenciado pelo Time de Desenvolvimento",
+              "Pode ser atualizado durante a Sprint"
+            ],
+            "examples": [
+              "Lista de histórias de usuário escolhidas para a Sprint",
+              "Tarefas necessárias para implementar funcionalidades da Sprint"
+            ]
+          }
+        },
+        {
+          "id": "scrum-incremento",
+          "title": "Scrum — Incremento",
+          "back": {
+            "keyQuestion": "Qual é o resultado entregue ao final de uma Sprint?",
+            "characteristics": [
+              "Resultado do trabalho realizado na Sprint",
+              "Parte do produto potencialmente utilizável",
+              "Soma de todos os itens concluídos do Product Backlog",
+              "Deve atender à Definition of Done",
+              "É apresentado durante a Sprint Review"
+            ],
+            "examples": [
+              "Nova funcionalidade implementada e testada",
+              "Versão atualizada do produto pronta para uso"
+            ]
+          }
+        },
+        {
+          "id": "extreme-programming",
+          "title": "Extreme Programming (XP)",
+          "back": {
+            "keyQuestion": "O que caracteriza a metodologia Extreme Programming (XP)?",
+            "characteristics": [
+              "Metodologia ágil focada em qualidade de software",
+              "Promove adaptação rápida às mudanças",
+              "Utiliza ciclos curtos de desenvolvimento",
+              "Valoriza colaboração entre equipe e cliente",
+              "Baseada em práticas técnicas de desenvolvimento"
+            ],
+            "examples": [
+              "Programação em par (Pair Programming)",
+              "Integração contínua",
+              "Refatoração constante",
+              "Testes automatizados"
+            ]
+          }
+        },
+        {
+          "id": "xp-pair-programming",
+          "title": "XP — Programação em Par",
+          "back": {
+            "keyQuestion": "Como funciona a prática de programação em par no XP?",
+            "characteristics": [
+              "Dois desenvolvedores trabalham juntos no mesmo código",
+              "Um escreve o código (Driver)",
+              "O outro revisa e orienta (Navigator)",
+              "Promove compartilhamento de conhecimento",
+              "Ajuda a reduzir erros no desenvolvimento"
+            ],
+            "examples": [
+              "Um programador implementa a solução enquanto o outro revisa o código",
+              "Troca periódica de papéis entre Driver e Navigator"
+            ]
+          }
+        },
+        {
+          "id": "xp-tdd",
+          "title": "XP — TDD (Test Driven Development)",
+          "back": {
+            "keyQuestion": "Como funciona o desenvolvimento orientado a testes (TDD)?",
+            "characteristics": [
+              "Primeiro escreve-se o teste automatizado",
+              "Depois implementa-se o código para passar no teste",
+              "Ciclo contínuo de desenvolvimento e testes",
+              "Ajuda a garantir qualidade e confiabilidade do código",
+              "Favorece design de código mais simples e testável"
+            ],
+            "examples": [
+              "Criar um teste que falha antes de implementar a funcionalidade",
+              "Executar o ciclo Red → Green → Refactor"
+            ]
+          }
+        },
+        {
+          "id": "xp-refatoracao",
+          "title": "XP — Refatoração",
+          "back": {
+            "keyQuestion": "O que é refatoração no desenvolvimento de software?",
+            "characteristics": [
+              "Melhoria da estrutura interna do código",
+              "Não altera o comportamento externo do sistema",
+              "Torna o código mais simples e legível",
+              "Facilita manutenção e evolução do sistema",
+              "Prática comum em metodologias ágeis e XP"
+            ],
+            "examples": [
+              "Renomear variáveis para nomes mais claros",
+              "Extrair métodos para reduzir duplicação de código",
+              "Reorganizar classes para melhorar a estrutura do sistema"
+            ]
+          }
+        },
+        {
+          "id": "xp-integracao-continua",
+          "title": "XP — Integração Contínua",
+          "back": {
+            "keyQuestion": "Qual é o objetivo da prática de integração contínua no XP?",
+            "characteristics": [
+              "Integração frequente do código no repositório principal",
+              "Detecta erros de integração rapidamente",
+              "Utiliza builds e testes automatizados",
+              "Evita grandes conflitos de integração",
+              "Permite feedback rápido para a equipe"
+            ],
+            "examples": [
+              "Executar testes automatizados a cada commit",
+              "Pipeline de build que valida o código integrado"
+            ]
+          }
+        },
+        {
+          "id": "xp-cliente-presente",
+          "title": "XP — Cliente Presente",
+          "back": {
+            "keyQuestion": "Qual é o papel do cliente na prática 'Cliente Presente' do XP?",
+            "characteristics": [
+              "Cliente participa ativamente do projeto",
+              "Fica disponível para esclarecer dúvidas da equipe",
+              "Ajuda a definir requisitos e prioridades",
+              "Fornece feedback rápido sobre funcionalidades",
+              "Facilita comunicação entre equipe e negócio"
+            ],
+            "examples": [
+              "Cliente disponível para responder dúvidas durante o desenvolvimento",
+              "Validação rápida de funcionalidades implementadas"
+            ]
+          }
+        },
+        {
+          "id": "xp-vs-scrum",
+          "title": "XP × Scrum",
+          "back": {
+            "keyQuestion": "Qual é a principal diferença entre Scrum e Extreme Programming?",
+            "characteristics": [
+              "Scrum é focado na gestão e organização do trabalho",
+              "XP é focado em práticas técnicas de desenvolvimento",
+              "Scrum define papéis, eventos e artefatos",
+              "XP define práticas de engenharia de software",
+              "As duas metodologias podem ser usadas juntas"
+            ],
+            "examples": [
+              "Scrum organiza o processo de trabalho da equipe",
+              "XP aplica práticas como TDD e programação em par"
+            ]
+          }
+        },
+        {
+          "id": "lean-software-development",
+          "title": "Lean Software Development",
+          "back": {
+            "keyQuestion": "Qual é o objetivo do Lean Software Development?",
+            "characteristics": [
+              "Baseado no modelo de produção da Toyota",
+              "Foco em eliminar desperdícios no processo",
+              "Busca maximizar valor para o cliente",
+              "Promove melhoria contínua",
+              "Valoriza eficiência e simplicidade nos processos"
+            ],
+            "examples": [
+              "Evitar funcionalidades que não agregam valor",
+              "Reduzir retrabalho e burocracia no desenvolvimento",
+              "Entregar software de forma mais rápida e eficiente"
+            ]
+          }
+        },
+        {
+          "id": "dsdm",
+          "title": "DSDM (Dynamic Systems Development Method)",
+          "back": {
+            "keyQuestion": "Qual é a principal característica do DSDM?",
+            "characteristics": [
+              "Metodologia ágil estruturada",
+              "Prazo e custo fixos",
+              "Escopo ajustável conforme prioridades",
+              "Foco em entregas dentro do tempo e orçamento definidos",
+              "Utiliza priorização de requisitos"
+            ],
+            "examples": [
+              "Uso da técnica MoSCoW para priorizar funcionalidades",
+              "Ajustar o escopo da entrega para manter prazo e orçamento"
+            ]
+          }
+        },
+        {
+          "id": "crystal",
+          "title": "Crystal",
+          "back": {
+            "keyQuestion": "Qual é a principal característica da metodologia Crystal?",
+            "characteristics": [
+              "Criada por Alistair Cockburn",
+              "Foca nas pessoas mais do que em processos rígidos",
+              "Família de metodologias adaptativas",
+              "Adapta-se ao tamanho da equipe e criticidade do projeto",
+              "Maior criticidade exige mais disciplina no processo"
+            ],
+            "examples": [
+              "Crystal Clear utilizado por equipes pequenas",
+              "Processos mais estruturados em projetos mais críticos"
+            ]
+          }
+        },
+        {
+          "id": "asd-adaptive-software-development",
+          "title": "ASD (Adaptive Software Development)",
+          "back": {
+            "keyQuestion": "Qual é o princípio central do Adaptive Software Development (ASD)?",
+            "characteristics": [
+              "Criada por Jim Highsmith",
+              "Focada em adaptação contínua às mudanças",
+              "Voltada para ambientes incertos e complexos",
+              "Baseada em ciclos iterativos de aprendizado",
+              "Valoriza colaboração da equipe"
+            ],
+            "examples": [
+              "Ciclo Speculate → Collaborate → Learn",
+              "Planejamento flexível que se adapta conforme o projeto evolui"
+            ]
+          }
         }
       ]
     }
